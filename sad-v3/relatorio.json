@@ -1,0 +1,26 @@
+{
+    "grupo": {
+        "nome": "grupo 1",
+        "alunos": [
+            {"nome": "um nome", "matricula": "0000000"},
+            {"nome": "outro nome", "matricula": "0000000"}
+        ]
+    },
+    "quartus": {
+        "os": "Windows 11",
+        "versao": "13.1.0 Build 162 10/23/2013 SJ Web Edition",
+        "fpga": {
+        "familia": "familia",
+        "dispositivo": "dispositivo"
+        }
+    },
+    "utilizacao": {
+        "total combinational functions": 123,
+        "dedicated logic registers": 12,
+        "total pins": 5
+    },
+    "atraso": {
+        "Fmax": 2.5,
+        "unidade": "MHz"
+    }        
+}
