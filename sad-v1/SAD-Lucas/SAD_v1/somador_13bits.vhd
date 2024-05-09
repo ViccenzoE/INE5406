@@ -9,7 +9,7 @@ ENTITY somadornbits IS
 END somadornbits;
 
 ARCHITECTURE comportamento OF somador_nbits IS
-    SIGNAL c : STD_LOGIC_VECTOR ( DOWNTO 0);
+    SIGNAL c : STD_LOGIC;
     COMPONENT Somador1bit
           PORT (cin, a, b : IN  STD_LOGIC;
                         s, cout : OUT  STD_LOGIC);
