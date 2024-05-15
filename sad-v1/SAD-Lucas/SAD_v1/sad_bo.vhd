@@ -24,7 +24,8 @@ ARCHITECTURE arc OF Datapath IS
 	SIGNAL sig21, sig22, sig25 : STD_LOGIC_VECTOR(6 downto 0); -- Sinais 7 bits lado esquerdo do bloco operacional
 	SIGNAL sig23, sig24 : STD_LOGIC_VECTOR(5 downto 0); -- Demais sinais do lado esquerdo do bloco operacional
 	SIGNAL zero14 : STD_LOGIC_VECTOR(13 downto 0); -- Opção nula do mux1
-
+	SIGNAL zero7 : STD_LOGIC_VECTOR(6 downto 0); -- Opção nula do mux2
+	SIGNAL um6 : STD_LOGIC_VECTOR(5 downto 0);
 ------------------------- COMPONENTS -------------------------------------
 
 COMPONENT registrador IS 
@@ -78,7 +79,11 @@ BEGIN
 
 sig5 <= "000000" & sig4;
 zero14 <= "00000000000000";
-
+zero7 <= "0000000";
+sig23 <= "00000000" & sig22(5 downto 0);
+um6 <= "111111";
+sig25 <= sig24;
+menor <= not(sig22(6));
 -------------------------------------PORTMAPS------------------------------------------------------
 
 
@@ -90,5 +95,9 @@ som1 : somadornbits PORT MAP('0', sig8, sig5, sig6);
 mux1 : mux2para1 PORT MAP(zsoma, sig6, zero14, sig7);
 soma : registrador PORT MAP(csoma, sig7, sig8);
 SAD_reg : registrador PORT MAP(csad_reg, sig8, sig9);
+mux2 : mux2para1 PORT MAP(zi, sig25, zero7, sig21);
+i : registrador PORT MAP(ci, sig21, sig22);
+som2: somadornbits PORT MAP('0', sig23, um6, sig24(13 downto 0)); 
+
 
 END arc;
