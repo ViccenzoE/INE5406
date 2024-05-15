@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAD_v1
-Thu May 09 09:26:11 2024
+Tue May 14 23:57:01 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,10 +36,10 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu May 09 09:26:11 2024          ;
+; Analysis & Synthesis Status        ; Failed - Tue May 14 23:57:01 2024          ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; SAD_v1                                     ;
-; Top-level Entity Name              ; subtrator1bit                              ;
+; Top-level Entity Name              ; sad_bc                                     ;
 ; Family                             ; Cyclone III                                ;
 ; Total logic elements               ; N/A until Partition Merge                  ;
 ;     Total combinational functions  ; N/A until Partition Merge                  ;
@@ -59,7 +59,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C5E144C7        ;                    ;
-; Top-level entity name                                                      ; subtrator1bit      ; SAD_v1             ;
+; Top-level entity name                                                      ; sad_bc             ; SAD_v1             ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,45 +157,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu May 09 09:26:10 2024
+    Info: Processing started: Tue May 14 23:57:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAD_v1 -c SAD_v1
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10500): VHDL syntax error at SAD_v1.vhd(43) near text "pronto";  expecting "begin", or a declaration statement File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 43
-Error (10500): VHDL syntax error at SAD_v1.vhd(44) near text § File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 44
-Error (10500): VHDL syntax error at SAD_v1.vhd(45) near text { File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 45
-Error (10500): VHDL syntax error at SAD_v1.vhd(47) near text € File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 47
-Error (10500): VHDL syntax error at SAD_v1.vhd(47) near text “ File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 47
-Error (10500): VHDL syntax error at SAD_v1.vhd(48) near text } File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 48
-Error (10500): VHDL syntax error at SAD_v1.vhd(80) near text "BEGIN";  expecting "end", or "(", or an identifier ("begin" is a reserved keyword), or a sequential statement File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/SAD_v1.vhd Line: 80
-Info (12021): Found 0 design units, including 0 entities, in source file sad_v1.vhd
-Info (12021): Found 2 design units, including 1 entities, in source file somador_8bits.vhd
-    Info (12022): Found design unit 1: somador_13bits-comportamento
-    Info (12023): Found entity 1: somador13bits
+Warning (12019): Can't analyze file -- file somador_8bits.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file somador1bit.vhd
     Info (12022): Found design unit 1: somador1bit-comportamento
     Info (12023): Found entity 1: somador1bit
-Error (10500): VHDL syntax error at somador_13bits.vhd(8) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 8
-Error (10500): VHDL syntax error at somador_13bits.vhd(13) near text "COMPONENT";  expecting an identifier ("component" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 13
-Error (10500): VHDL syntax error at somador_13bits.vhd(16) near text "COMPONENT";  expecting ";", or an identifier ("component" is a reserved keyword), or "entity" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 16
-Error (10500): VHDL syntax error at somador_13bits.vhd(30) near text "END";  expecting ";" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 30
-Error (10522): VHDL Syntax error at somador_13bits.vhd(30): experienced unexpected end-of-file  File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 30
+Error (10500): VHDL syntax error at somador_13bits.vhd(22) near text "sc";  expecting "when" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 22
+Error (10500): VHDL syntax error at somador_13bits.vhd(23) near text "elsif" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 23
+Error (10500): VHDL syntax error at somador_13bits.vhd(25) near text "else" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 25
+Error (10396): VHDL syntax error at somador_13bits.vhd(27): name used in construct must match previously specified name "scs" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 27
+Error (10500): VHDL syntax error at somador_13bits.vhd(28) near text "end generate scs;";  expecting "end", or "(", or an identifier, or a concurrent statement File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 28
+Error (10500): VHDL syntax error at somador_13bits.vhd(28) near text  File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 28
 Info (12021): Found 0 design units, including 0 entities, in source file somador_13bits.vhd
-Error (10500): VHDL syntax error at subtrator1bit.vhd(9) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtrator1bit.vhd Line: 9
-Error (10500): VHDL syntax error at subtrator1bit.vhd(15) near text "COMPONENT";  expecting an identifier ("component" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtrator1bit.vhd Line: 15
-Error (10500): VHDL syntax error at subtrator1bit.vhd(18) near text "COMPONENT";  expecting ";", or an identifier ("component" is a reserved keyword), or "entity" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtrator1bit.vhd Line: 18
-Error (10396): VHDL syntax error at subtrator1bit.vhd(20): name used in construct must match previously specified name "subtrator1bit" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtrator1bit.vhd Line: 20
-Error (10523): Ignored construct subtrator1bit at subtrator1bit.vhd(5) due to previous errors File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtrator1bit.vhd Line: 5
-Error (10500): VHDL syntax error at subtrator1bit.vhd(21) near text "BEGIN";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtrator1bit.vhd Line: 21
-Info (12021): Found 0 design units, including 0 entities, in source file subtrator1bit.vhd
-Error (10500): VHDL syntax error at abs.vhd(4) near text "abs";  expecting an identifier File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/abs.vhd Line: 4
-Error (10500): VHDL syntax error at abs.vhd(6) near text ")"; mismatched closing parenthesis  File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/abs.vhd Line: 6
-Error (10500): VHDL syntax error at abs.vhd(11) near text "abs";  expecting "end", or "(", or an identifier ("abs" is a reserved keyword), or a concurrent statement File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/abs.vhd Line: 11
-Error (10500): VHDL syntax error at abs.vhd(12) near text "END";  expecting "<=" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/abs.vhd Line: 12
-Info (12021): Found 0 design units, including 0 entities, in source file abs.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 22 errors, 1 warning
-    Error: Peak virtual memory: 4648 megabytes
-    Error: Processing ended: Thu May 09 09:26:11 2024
-    Error: Elapsed time: 00:00:01
+Warning (12019): Can't analyze file -- file subtrator1bit.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file abst.vhd
+    Info (12022): Found design unit 1: abd-comportamento
+    Info (12023): Found entity 1: abst
+Info (12021): Found 2 design units, including 1 entities, in source file sad_bc.vhd
+    Info (12022): Found design unit 1: sad_bc-arch
+    Info (12023): Found entity 1: sad_bc
+Info (12021): Found 2 design units, including 1 entities, in source file subtratornbits.vhd
+    Info (12022): Found design unit 1: subtrator-rtl
+    Info (12023): Found entity 1: subtratornbits
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 6 errors, 3 warnings
+    Error: Peak virtual memory: 4636 megabytes
+    Error: Processing ended: Tue May 14 23:57:01 2024
+    Error: Elapsed time: 00:00:00
     Error: Total CPU time (on all processors): 00:00:01
 
 
