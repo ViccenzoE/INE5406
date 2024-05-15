@@ -15,8 +15,7 @@ ENTITY sad_bc IS
 		-- se você desejar, pode usar os valores abaixo para descrever uma
 		-- entidade que funcione tanto para a SAD v1 quanto para a SAD v3.
 		N : INTEGER := 64; -- número de amostras por bloco
-		P : INTEGER := 1; -- número de amostras de cada bloco lidas em paralelo
-		X : SIGNED := (Log2(N/P)-1)
+		P : INTEGER := 1 -- número de amostras de cada bloco lidas em paralelo
 		-----------------------------------------------------------------------
 	);
 	PORT (
@@ -34,8 +33,8 @@ ENTITY sad_bc IS
 		sample_can : IN STD_LOGIC_VECTOR ((B-1)*P DOWNTO 0); -- Mem_B[end]
 		menor : IN STD_LOGIC; -- menor que a quantia de linhas
 		read_mem : OUT STD_LOGIC; -- read
-		address : OUT STD_LOGIC_VECTOR (X DOWNTO 0); -- end 5
-		sad_value : OUT STD_LOGIC_VECTOR (ceil(Log2(real((2**B-1)*N)))-1 DOWNTO 0); -- SAD 13
+		address : OUT STD_LOGIC_VECTOR (5 DOWNTO 0); -- end 5
+		sad_value : OUT STD_LOGIC_VECTOR ((B + 5) DOWNTO 0); -- SAD 13
 		done : OUT STD_LOGIC;
 		cpA, cpB, ci, zi, zsoma, csoma, csad_reg : OUT STD_LOGIC
 		);
@@ -70,55 +69,41 @@ BEGIN
 		case EA is
 			  
 		  when S0 => 
-				read_mem <= 0;
-				done <= 1;
+				read_mem <= '0';
+				done <= '1';
 				if enable='1' then
 					PE <= S1;
 				else
 					PE <= S0;
 				end if;
 		  when S1 =>
-				done <= 0;
-				address <= 0;
-				soma <= 0;
-				zi <= 1; 
-				ci <= 1;
-				zsoma <= 1;
-				csoma <= 1;
-				AC <= 0;
-				T <= ent;
-				-- sel dos mux add?; 
-				-- clock dos registradores add?;
+				done <= '0';
+				zi <= '1'; 
+				ci <= '1';
+				zsoma <= '1';
+				csoma <= '1';
+				PE <= S2;
 		  when S2 => 
-				AC <= (AC + ent);
-				T <= ent;
 				if menor = '1' then
 					PE <= S3;
 				else
-					PE <= S0;
+					PE <= S5;
 				end if;
 		  when S3 =>
-				AC <= (AC + ent);
-				T <= ent;
-				read_mem <= 1;
-				cpA <= 1;
-				cpB <= 1;
+				read_mem <= '1';
+				cpA <= '1';
+				cpB <= '1';
 				PE <= S4;
-				-- clock dos registradores add?
 		  when S4 =>
-				AC <= (AC + ent);
-				T <= ent;
-				read_mem <= 0;
-				zi <= 0;
-				ci <= 1;
-				zsoma <= 0;
-				csoma <= 1;
+				read_mem <= '0';
+				zi <= '0';
+				ci <= '1';
+				zsoma <= '0';
+				csoma <= '1';
 				PE <= S2;
-				-- clocks dos registradores e sel add?
 		  when S5 =>
-				AC <= (AC + ent);
-				csag_reg <= 1;
-				SAD_reg <= soma;
+				csad_reg <= '1';
+				PE <= S0;
 		end case;
 	end process;
 END ARCHITECTURE; -- arch

@@ -11,7 +11,7 @@ port (
 );
 end subtratornbits;
 
-architecture rtl of subtrator is
+architecture rtl of subtratornbits is
 begin
     saida <= signed(sub1) - signed(sub2);
 end rtl;
