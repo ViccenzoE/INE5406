@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for SAD_v1
-Wed May 15 15:07:37 2024
+Wed May 15 17:42:13 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -1276,7 +1276,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 15 15:07:36 2024
+    Info: Processing started: Wed May 15 17:42:11 2024
 Info: Command: quartus_sta SAD_v1 -c SAD_v1
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1369,9 +1369,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4612 megabytes
-    Info: Processing ended: Wed May 15 15:07:37 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4615 megabytes
+    Info: Processing ended: Wed May 15 17:42:13 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "05/15/2024 15:07:39"
+-- DATE "05/15/2024 17:42:15"
 
 -- 
 -- Device: Altera EP3C5E144C7 Package TQFP144
@@ -41,17 +41,17 @@ ENTITY 	sad_bc IS
 	sample_ori : IN std_logic_vector(7 DOWNTO 0);
 	sample_can : IN std_logic_vector(7 DOWNTO 0);
 	menor : IN std_logic;
-	read_mem : OUT std_logic;
-	address : OUT std_logic_vector(5 DOWNTO 0);
-	sad_value : OUT std_logic_vector(13 DOWNTO 0);
-	done : OUT std_logic;
-	cpA : OUT std_logic;
-	cpB : OUT std_logic;
-	ci : OUT std_logic;
-	zi : OUT std_logic;
-	zsoma : OUT std_logic;
-	csoma : OUT std_logic;
-	csad_reg : OUT std_logic
+	read_mem : BUFFER std_logic;
+	address : BUFFER std_logic_vector(5 DOWNTO 0);
+	sad_value : BUFFER std_logic_vector(13 DOWNTO 0);
+	done : BUFFER std_logic;
+	cpA : BUFFER std_logic;
+	cpB : BUFFER std_logic;
+	ci : BUFFER std_logic;
+	zi : BUFFER std_logic;
+	zsoma : BUFFER std_logic;
+	csoma : BUFFER std_logic;
+	csad_reg : BUFFER std_logic
 	);
 END sad_bc;
 

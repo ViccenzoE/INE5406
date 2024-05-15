@@ -1,14 +1,12 @@
 vendor_name = ModelSim
 source_file = 1, SAD_v1
-source_file = 1, somador_8bits.vhd
 source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador1bit.vhd
-source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd
-source_file = 1, subtrator1bit.vhd
 source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/abst.vhd
 source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd
-source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtratornbits.vhd
 source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/mux2para1.vhd
 source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bo.vhd
+source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somadornbits.vhd
+source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtratornbits.vhd
 source_file = 1, C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/db/SAD_v1.cbx.xml
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
