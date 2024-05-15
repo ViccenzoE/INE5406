@@ -1,19 +1,22 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.math_real.all;
+use ieee.numeric_std.all; 
+
 -- no bloco de controle devemos usar os sinais apenas ou atribuir valores aos registradores, ou ambos? FSM ou FSMD, ou ambos?
 
 ENTITY sad_bc IS
 	GENERIC (
 		-- obrigatório ---
 		-- defina as operações considerando o número B de bits por amostra
-		B : POSITIVE := 8; -- número de bits por amostra
+		B : INTEGER := 8; -- número de bits por amostra
 		-----------------------------------------------------------------------
 		-- desejado (i.e., não obrigatório) ---
 		-- se você desejar, pode usar os valores abaixo para descrever uma
 		-- entidade que funcione tanto para a SAD v1 quanto para a SAD v3.
-		N : POSITIVE := 64; -- número de amostras por bloco
-		P : POSITIVE := 1 -- número de amostras de cada bloco lidas em paralelo
+		N : INTEGER := 64; -- número de amostras por bloco
+		P : INTEGER := 1; -- número de amostras de cada bloco lidas em paralelo
+		X : SIGNED := (Log2(N/P)-1)
 		-----------------------------------------------------------------------
 	);
 	PORT (
@@ -31,7 +34,7 @@ ENTITY sad_bc IS
 		sample_can : IN STD_LOGIC_VECTOR ((B-1)*P DOWNTO 0); -- Mem_B[end]
 		menor : IN STD_LOGIC; -- menor que a quantia de linhas
 		read_mem : OUT STD_LOGIC; -- read
-		address : OUT STD_LOGIC_VECTOR (Log2(N/P)-1 DOWNTO 0); -- end 5
+		address : OUT STD_LOGIC_VECTOR (X DOWNTO 0); -- end 5
 		sad_value : OUT STD_LOGIC_VECTOR (ceil(Log2(real((2**B-1)*N)))-1 DOWNTO 0); -- SAD 13
 		done : OUT STD_LOGIC;
 		cpA, cpB, ci, zi, zsoma, csoma, csad_reg : OUT STD_LOGIC

@@ -52,7 +52,7 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name VHDL_FILE somador_8bits.vhd
 set_global_assignment -name VHDL_FILE somador1bit.vhd
-set_global_assignment -name VHDL_FILE somador_13bits.vhd
+set_global_assignment -name VHDL_FILE somador_13bits.vhd -hdl_version VHDL_2008
 set_global_assignment -name VHDL_FILE subtrator1bit.vhd
 set_global_assignment -name VHDL_FILE abst.vhd
 set_global_assignment -name VHDL_FILE sad_bc.vhd

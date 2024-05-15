@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAD_v1
-Tue May 14 23:57:01 2024
+Wed May 15 11:15:12 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 14 23:57:01 2024          ;
+; Analysis & Synthesis Status        ; Failed - Wed May 15 11:15:12 2024          ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; SAD_v1                                     ;
 ; Top-level Entity Name              ; sad_bc                                     ;
@@ -157,23 +157,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue May 14 23:57:01 2024
+    Info: Processing started: Wed May 15 11:15:11 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAD_v1 -c SAD_v1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file somador_8bits.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file somador1bit.vhd
     Info (12022): Found design unit 1: somador1bit-comportamento
     Info (12023): Found entity 1: somador1bit
-Error (10500): VHDL syntax error at somador_13bits.vhd(22) near text "sc";  expecting "when" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 22
-Error (10500): VHDL syntax error at somador_13bits.vhd(23) near text "elsif" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 23
-Error (10500): VHDL syntax error at somador_13bits.vhd(25) near text "else" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 25
-Error (10396): VHDL syntax error at somador_13bits.vhd(27): name used in construct must match previously specified name "scs" File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 27
-Error (10500): VHDL syntax error at somador_13bits.vhd(28) near text "end generate scs;";  expecting "end", or "(", or an identifier, or a concurrent statement File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 28
-Error (10500): VHDL syntax error at somador_13bits.vhd(28) near text  File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador_13bits.vhd Line: 28
-Info (12021): Found 0 design units, including 0 entities, in source file somador_13bits.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file somador_13bits.vhd
+    Info (12022): Found design unit 1: somadornbits-comportamento
+    Info (12023): Found entity 1: somadornbits
 Warning (12019): Can't analyze file -- file subtrator1bit.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file abst.vhd
-    Info (12022): Found design unit 1: abd-comportamento
+    Info (12022): Found design unit 1: abst-comportamento
     Info (12023): Found entity 1: abst
 Info (12021): Found 2 design units, including 1 entities, in source file sad_bc.vhd
     Info (12022): Found design unit 1: sad_bc-arch
@@ -181,10 +177,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file sad_bc.
 Info (12021): Found 2 design units, including 1 entities, in source file subtratornbits.vhd
     Info (12022): Found design unit 1: subtrator-rtl
     Info (12023): Found entity 1: subtratornbits
+Error (10552): VHDL expression error at sad_bc.vhd(19): illegal N in expression File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd Line: 19
+Error (10552): VHDL expression error at sad_bc.vhd(19): illegal P in expression File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd Line: 19
+Error (10327): VHDL error at sad_bc.vhd(19): can't determine definition of operator ""/"" -- found 0 possible definitions File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd Line: 19
+Error (10327): VHDL error at sad_bc.vhd(19): can't determine definition of operator ""-"" -- found 0 possible definitions File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd Line: 19
+Error (10556): VHDL error at sad_bc.vhd(17): generic "N" cannot be used in its own interface list File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd Line: 17
+Error (10556): VHDL error at sad_bc.vhd(18): generic "P" cannot be used in its own interface list File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd Line: 18
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 6 errors, 3 warnings
-    Error: Peak virtual memory: 4636 megabytes
-    Error: Processing ended: Tue May 14 23:57:01 2024
-    Error: Elapsed time: 00:00:00
+    Error: Peak virtual memory: 4648 megabytes
+    Error: Processing ended: Wed May 15 11:15:12 2024
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 
