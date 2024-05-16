@@ -1,5 +1,5 @@
 Fitter report for sad_v3
-Wed May 15 22:49:14 2024
+Thu May 16 20:16:56 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 15 22:49:14 2024      ;
+; Fitter Status                      ; Successful - Thu May 16 20:16:56 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; sad_v3                                     ;
 ; Top-level Entity Name              ; Topo                                       ;
@@ -79,7 +79,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 5 / 5,136 ( < 1 % )                        ;
 ;     Dedicated logic registers      ; 4 / 5,136 ( < 1 % )                        ;
 ; Total registers                    ; 4                                          ;
-; Total pins                         ; 41 / 95 ( 43 % )                           ;
+; Total pins                         ; 81 / 95 ( 85 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                             ;
@@ -158,53 +158,93 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------+
-; I/O Assignment Warnings                       ;
-+---------------+-------------------------------+
-; Pin Name      ; Reason                        ;
-+---------------+-------------------------------+
-; sample_ori[0] ; Incomplete set of assignments ;
-; sample_ori[1] ; Incomplete set of assignments ;
-; sample_ori[2] ; Incomplete set of assignments ;
-; sample_ori[3] ; Incomplete set of assignments ;
-; sample_ori[4] ; Incomplete set of assignments ;
-; sample_ori[5] ; Incomplete set of assignments ;
-; sample_ori[6] ; Incomplete set of assignments ;
-; sample_ori[7] ; Incomplete set of assignments ;
-; sample_can[0] ; Incomplete set of assignments ;
-; sample_can[1] ; Incomplete set of assignments ;
-; sample_can[2] ; Incomplete set of assignments ;
-; sample_can[3] ; Incomplete set of assignments ;
-; sample_can[4] ; Incomplete set of assignments ;
-; sample_can[5] ; Incomplete set of assignments ;
-; sample_can[6] ; Incomplete set of assignments ;
-; sample_can[7] ; Incomplete set of assignments ;
-; SAD_saida[0]  ; Incomplete set of assignments ;
-; SAD_saida[1]  ; Incomplete set of assignments ;
-; SAD_saida[2]  ; Incomplete set of assignments ;
-; SAD_saida[3]  ; Incomplete set of assignments ;
-; SAD_saida[4]  ; Incomplete set of assignments ;
-; SAD_saida[5]  ; Incomplete set of assignments ;
-; SAD_saida[6]  ; Incomplete set of assignments ;
-; SAD_saida[7]  ; Incomplete set of assignments ;
-; SAD_saida[8]  ; Incomplete set of assignments ;
-; SAD_saida[9]  ; Incomplete set of assignments ;
-; SAD_saida[10] ; Incomplete set of assignments ;
-; SAD_saida[11] ; Incomplete set of assignments ;
-; SAD_saida[12] ; Incomplete set of assignments ;
-; SAD_saida[13] ; Incomplete set of assignments ;
-; end_sad[0]    ; Incomplete set of assignments ;
-; end_sad[1]    ; Incomplete set of assignments ;
-; end_sad[2]    ; Incomplete set of assignments ;
-; end_sad[3]    ; Incomplete set of assignments ;
-; end_sad[4]    ; Incomplete set of assignments ;
-; end_sad[5]    ; Incomplete set of assignments ;
-; read_sad      ; Incomplete set of assignments ;
-; pronto        ; Incomplete set of assignments ;
-; iniciar       ; Incomplete set of assignments ;
-; CLOCK         ; Incomplete set of assignments ;
-; reset         ; Incomplete set of assignments ;
-+---------------+-------------------------------+
++------------------------------------------------+
+; I/O Assignment Warnings                        ;
++----------------+-------------------------------+
+; Pin Name       ; Reason                        ;
++----------------+-------------------------------+
+; sample_ori[0]  ; Incomplete set of assignments ;
+; sample_ori[1]  ; Incomplete set of assignments ;
+; sample_ori[2]  ; Incomplete set of assignments ;
+; sample_ori[3]  ; Incomplete set of assignments ;
+; sample_ori[4]  ; Incomplete set of assignments ;
+; sample_ori[5]  ; Incomplete set of assignments ;
+; sample_ori[6]  ; Incomplete set of assignments ;
+; sample_ori[7]  ; Incomplete set of assignments ;
+; sample_ori[8]  ; Incomplete set of assignments ;
+; sample_ori[9]  ; Incomplete set of assignments ;
+; sample_ori[10] ; Incomplete set of assignments ;
+; sample_ori[11] ; Incomplete set of assignments ;
+; sample_ori[12] ; Incomplete set of assignments ;
+; sample_ori[13] ; Incomplete set of assignments ;
+; sample_ori[14] ; Incomplete set of assignments ;
+; sample_ori[15] ; Incomplete set of assignments ;
+; sample_ori[16] ; Incomplete set of assignments ;
+; sample_ori[17] ; Incomplete set of assignments ;
+; sample_ori[18] ; Incomplete set of assignments ;
+; sample_ori[19] ; Incomplete set of assignments ;
+; sample_ori[20] ; Incomplete set of assignments ;
+; sample_ori[21] ; Incomplete set of assignments ;
+; sample_ori[22] ; Incomplete set of assignments ;
+; sample_ori[23] ; Incomplete set of assignments ;
+; sample_ori[24] ; Incomplete set of assignments ;
+; sample_ori[25] ; Incomplete set of assignments ;
+; sample_ori[26] ; Incomplete set of assignments ;
+; sample_ori[27] ; Incomplete set of assignments ;
+; sample_ori[28] ; Incomplete set of assignments ;
+; sample_ori[29] ; Incomplete set of assignments ;
+; sample_ori[30] ; Incomplete set of assignments ;
+; sample_ori[31] ; Incomplete set of assignments ;
+; sample_can[0]  ; Incomplete set of assignments ;
+; sample_can[1]  ; Incomplete set of assignments ;
+; sample_can[2]  ; Incomplete set of assignments ;
+; sample_can[3]  ; Incomplete set of assignments ;
+; sample_can[4]  ; Incomplete set of assignments ;
+; sample_can[5]  ; Incomplete set of assignments ;
+; sample_can[6]  ; Incomplete set of assignments ;
+; sample_can[7]  ; Incomplete set of assignments ;
+; sample_can[8]  ; Incomplete set of assignments ;
+; sample_can[9]  ; Incomplete set of assignments ;
+; sample_can[10] ; Incomplete set of assignments ;
+; sample_can[11] ; Incomplete set of assignments ;
+; sample_can[12] ; Incomplete set of assignments ;
+; sample_can[13] ; Incomplete set of assignments ;
+; sample_can[14] ; Incomplete set of assignments ;
+; sample_can[15] ; Incomplete set of assignments ;
+; sample_can[16] ; Incomplete set of assignments ;
+; sample_can[17] ; Incomplete set of assignments ;
+; sample_can[18] ; Incomplete set of assignments ;
+; sample_can[19] ; Incomplete set of assignments ;
+; sample_can[20] ; Incomplete set of assignments ;
+; sample_can[21] ; Incomplete set of assignments ;
+; sample_can[22] ; Incomplete set of assignments ;
+; sample_can[23] ; Incomplete set of assignments ;
+; sample_can[24] ; Incomplete set of assignments ;
+; sample_can[25] ; Incomplete set of assignments ;
+; sample_can[26] ; Incomplete set of assignments ;
+; sample_can[27] ; Incomplete set of assignments ;
+; sample_can[28] ; Incomplete set of assignments ;
+; sample_can[29] ; Incomplete set of assignments ;
+; sample_can[30] ; Incomplete set of assignments ;
+; sample_can[31] ; Incomplete set of assignments ;
+; SAD_saida[0]   ; Incomplete set of assignments ;
+; SAD_saida[1]   ; Incomplete set of assignments ;
+; SAD_saida[2]   ; Incomplete set of assignments ;
+; SAD_saida[3]   ; Incomplete set of assignments ;
+; SAD_saida[4]   ; Incomplete set of assignments ;
+; SAD_saida[5]   ; Incomplete set of assignments ;
+; SAD_saida[6]   ; Incomplete set of assignments ;
+; SAD_saida[7]   ; Incomplete set of assignments ;
+; end_sad[0]     ; Incomplete set of assignments ;
+; end_sad[1]     ; Incomplete set of assignments ;
+; end_sad[2]     ; Incomplete set of assignments ;
+; end_sad[3]     ; Incomplete set of assignments ;
+; read_sad       ; Incomplete set of assignments ;
+; pronto         ; Incomplete set of assignments ;
+; iniciar        ; Incomplete set of assignments ;
+; CLOCK          ; Incomplete set of assignments ;
+; reset          ; Incomplete set of assignments ;
++----------------+-------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -213,8 +253,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 104 ) ; 0.00 % ( 0 / 104 )         ; 0.00 % ( 0 / 104 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 104 ) ; 0.00 % ( 0 / 104 )         ; 0.00 % ( 0 / 104 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 184 ) ; 0.00 % ( 0 / 184 )         ; 0.00 % ( 0 / 184 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 184 ) ; 0.00 % ( 0 / 184 )         ; 0.00 % ( 0 / 184 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -237,7 +277,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 94 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 174 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -274,7 +314,7 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ;                                             ;                     ;
 ; Total LABs:  partially or completely used   ; 1 / 321 ( < 1 % )   ;
 ; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 41 / 95 ( 43 % )    ;
+; I/O pins                                    ; 81 / 95 ( 85 % )    ;
 ;     -- Clock pins                           ; 3 / 4 ( 75 % )      ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )       ;
 ;                                             ;                     ;
@@ -293,8 +333,8 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
 ; Maximum fan-out                             ; 4                   ;
 ; Highest non-global fan-out                  ; 3                   ;
-; Total fan-out                               ; 75                  ;
-; Average fan-out                             ; 0.71                ;
+; Total fan-out                               ; 115                 ;
+; Average fan-out                             ; 0.62                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -329,7 +369,7 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ; Total LABs:  partially or completely used   ; 1 / 321 ( < 1 % )  ; 0 / 321 ( 0 % )                ;
 ;                                             ;                    ;                                ;
 ; Virtual pins                                ; 0                  ; 0                              ;
-; I/O pins                                    ; 41                 ; 0                              ;
+; I/O pins                                    ; 81                 ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 46 ( 0 % )     ; 0 / 46 ( 0 % )                 ;
 ; Total memory bits                           ; 0                  ; 0                              ;
 ; Total RAM block bits                        ; 0                  ; 0                              ;
@@ -342,7 +382,7 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 70                 ; 5                              ;
+;     -- Total Connections                    ; 110                ; 5                              ;
 ;     -- Registered Connections               ; 8                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
@@ -350,8 +390,8 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ;     -- hard_block:auto_generated_inst       ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Partition Interface                         ;                    ;                                ;
-;     -- Input Ports                          ; 19                 ; 0                              ;
-;     -- Output Ports                         ; 22                 ; 0                              ;
+;     -- Input Ports                          ; 67                 ; 0                              ;
+;     -- Output Ports                         ; 14                 ; 0                              ;
 ;     -- Bidir Ports                          ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Registered Ports                            ;                    ;                                ;
@@ -370,61 +410,101 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 +---------------------------------------------+--------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                                         ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; CLOCK         ; 22    ; 1        ; 0            ; 11           ; 0            ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; iniciar       ; 28    ; 2        ; 0            ; 9            ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; reset         ; 30    ; 2        ; 0            ; 8            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[0] ; 58    ; 4        ; 21           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[1] ; 144   ; 8        ; 1            ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[2] ; 100   ; 6        ; 34           ; 17           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[3] ; 88    ; 5        ; 34           ; 12           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[4] ; 89    ; 5        ; 34           ; 12           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[5] ; 64    ; 4        ; 25           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[6] ; 24    ; 2        ; 0            ; 11           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_can[7] ; 25    ; 2        ; 0            ; 11           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[0] ; 114   ; 7        ; 28           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[1] ; 133   ; 8        ; 13           ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[2] ; 74    ; 5        ; 34           ; 2            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[3] ; 66    ; 4        ; 28           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[4] ; 38    ; 3        ; 1            ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[5] ; 127   ; 7        ; 16           ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[6] ; 54    ; 4        ; 18           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; sample_ori[7] ; 10    ; 1        ; 0            ; 18           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                                          ;
++----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
+; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
++----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
+; CLOCK          ; 22    ; 1        ; 0            ; 11           ; 0            ; 4                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; iniciar        ; 90    ; 6        ; 34           ; 12           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; reset          ; 91    ; 6        ; 34           ; 12           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[0]  ; 144   ; 8        ; 1            ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[10] ; 58    ; 4        ; 21           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[11] ; 138   ; 8        ; 7            ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[12] ; 77    ; 5        ; 34           ; 4            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[13] ; 114   ; 7        ; 28           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[14] ; 143   ; 8        ; 1            ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[15] ; 49    ; 3        ; 13           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[16] ; 51    ; 3        ; 16           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[17] ; 42    ; 3        ; 3            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[18] ; 110   ; 7        ; 30           ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[19] ; 83    ; 5        ; 34           ; 9            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[1]  ; 65    ; 4        ; 28           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[20] ; 105   ; 6        ; 34           ; 19           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[21] ; 132   ; 8        ; 13           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[22] ; 137   ; 8        ; 7            ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[23] ; 98    ; 6        ; 34           ; 17           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[24] ; 44    ; 3        ; 5            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[25] ; 124   ; 7        ; 18           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[26] ; 11    ; 1        ; 0            ; 18           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[27] ; 141   ; 8        ; 5            ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[28] ; 68    ; 4        ; 30           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[29] ; 100   ; 6        ; 34           ; 17           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[2]  ; 128   ; 8        ; 16           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[30] ; 103   ; 6        ; 34           ; 18           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[31] ; 66    ; 4        ; 28           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[3]  ; 112   ; 7        ; 28           ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[4]  ; 129   ; 8        ; 16           ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[5]  ; 127   ; 7        ; 16           ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[6]  ; 142   ; 8        ; 3            ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[7]  ; 76    ; 5        ; 34           ; 4            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[8]  ; 106   ; 6        ; 34           ; 20           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_can[9]  ; 59    ; 4        ; 23           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[0]  ; 43    ; 3        ; 5            ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[10] ; 104   ; 6        ; 34           ; 18           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[11] ; 113   ; 7        ; 28           ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[12] ; 64    ; 4        ; 25           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[13] ; 135   ; 8        ; 11           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[14] ; 54    ; 4        ; 18           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[15] ; 31    ; 2        ; 0            ; 7            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[16] ; 72    ; 4        ; 32           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[17] ; 39    ; 3        ; 1            ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[18] ; 119   ; 7        ; 23           ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[19] ; 73    ; 5        ; 34           ; 2            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[1]  ; 46    ; 3        ; 7            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[20] ; 30    ; 2        ; 0            ; 8            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[21] ; 67    ; 4        ; 30           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[22] ; 1     ; 1        ; 0            ; 23           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[23] ; 34    ; 2        ; 0            ; 5            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[24] ; 75    ; 5        ; 34           ; 3            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[25] ; 88    ; 5        ; 34           ; 12           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[26] ; 89    ; 5        ; 34           ; 12           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[27] ; 38    ; 3        ; 1            ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[28] ; 115   ; 7        ; 28           ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[29] ; 125   ; 7        ; 18           ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[2]  ; 60    ; 4        ; 23           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[30] ; 10    ; 1        ; 0            ; 18           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[31] ; 85    ; 5        ; 34           ; 9            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[3]  ; 55    ; 4        ; 18           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[4]  ; 87    ; 5        ; 34           ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[5]  ; 71    ; 4        ; 32           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[6]  ; 99    ; 6        ; 34           ; 17           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[7]  ; 120   ; 7        ; 23           ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[8]  ; 33    ; 2        ; 0            ; 6            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; sample_ori[9]  ; 2     ; 1        ; 0            ; 23           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
++----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; SAD_saida[0]  ; 60    ; 4        ; 23           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[10] ; 77    ; 5        ; 34           ; 4            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[11] ; 126   ; 7        ; 16           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[12] ; 141   ; 8        ; 5            ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[13] ; 73    ; 5        ; 34           ; 2            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[1]  ; 42    ; 3        ; 3            ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[2]  ; 113   ; 7        ; 28           ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[3]  ; 59    ; 4        ; 23           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[4]  ; 46    ; 3        ; 7            ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[5]  ; 87    ; 5        ; 34           ; 10           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[6]  ; 110   ; 7        ; 30           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[7]  ; 124   ; 7        ; 18           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[8]  ; 55    ; 4        ; 18           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SAD_saida[9]  ; 44    ; 3        ; 5            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; end_sad[0]    ; 51    ; 3        ; 16           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; end_sad[1]    ; 125   ; 7        ; 18           ; 24           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; end_sad[2]    ; 72    ; 4        ; 32           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; end_sad[3]    ; 136   ; 8        ; 9            ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; end_sad[4]    ; 138   ; 8        ; 7            ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; end_sad[5]    ; 112   ; 7        ; 28           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; pronto        ; 31    ; 2        ; 0            ; 7            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; read_sad      ; 132   ; 8        ; 13           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-+---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++--------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++--------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
+; SAD_saida[0] ; 70    ; 4        ; 32           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[1] ; 32    ; 2        ; 0            ; 6            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[2] ; 52    ; 3        ; 16           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[3] ; 4     ; 1        ; 0            ; 22           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[4] ; 53    ; 3        ; 16           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[5] ; 121   ; 7        ; 23           ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[6] ; 80    ; 5        ; 34           ; 7            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SAD_saida[7] ; 126   ; 7        ; 16           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; end_sad[0]   ; 7     ; 1        ; 0            ; 21           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; end_sad[1]   ; 50    ; 3        ; 13           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; end_sad[2]   ; 69    ; 4        ; 30           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; end_sad[3]   ; 136   ; 8        ; 9            ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; pronto       ; 28    ; 2        ; 0            ; 9            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; read_sad     ; 74    ; 5        ; 34           ; 2            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
++--------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -439,33 +519,36 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ; 13       ; DATA0                       ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
 ; 14       ; nCONFIG                     ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 21       ; nCE                         ; -                        ; -                       ; Dedicated Programming Pin ;
-; 87       ; DIFFIO_R7p, DEV_CLRn        ; Use as regular IO        ; SAD_saida[5]            ; Dual Purpose Pin          ;
+; 87       ; DIFFIO_R7p, DEV_CLRn        ; Use as regular IO        ; sample_ori[4]           ; Dual Purpose Pin          ;
 ; 92       ; CONF_DONE                   ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 94       ; MSEL0                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 96       ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 97       ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; 97       ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
+; 98       ; DIFFIO_R4n, INIT_DONE       ; Use as regular IO        ; sample_can[23]          ; Dual Purpose Pin          ;
+; 99       ; DIFFIO_R4p, CRC_ERROR       ; Use as regular IO        ; sample_ori[6]           ; Dual Purpose Pin          ;
 ; 101      ; DIFFIO_R3n, nCEO            ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; 132      ; DIFFIO_T10n, DATA2          ; Use as regular IO        ; read_sad                ; Dual Purpose Pin          ;
-; 133      ; DIFFIO_T10p, DATA3          ; Use as regular IO        ; sample_ori[1]           ; Dual Purpose Pin          ;
-; 138      ; DATA6                       ; Use as regular IO        ; end_sad[4]              ; Dual Purpose Pin          ;
+; 103      ; DIFFIO_R3p, CLKUSR          ; Use as regular IO        ; sample_can[30]          ; Dual Purpose Pin          ;
+; 132      ; DIFFIO_T10n, DATA2          ; Use as regular IO        ; sample_can[21]          ; Dual Purpose Pin          ;
+; 137      ; DATA5                       ; Use as regular IO        ; sample_can[22]          ; Dual Purpose Pin          ;
+; 138      ; DATA6                       ; Use as regular IO        ; sample_can[11]          ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
-+-----------------------------------------------------------+
-; I/O Bank Usage                                            ;
-+----------+-----------------+---------------+--------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
-+----------+-----------------+---------------+--------------+
-; 1        ; 6 / 13 ( 46 % ) ; 2.5V          ; --           ;
-; 2        ; 5 / 8 ( 63 % )  ; 2.5V          ; --           ;
-; 3        ; 5 / 11 ( 45 % ) ; 2.5V          ; --           ;
-; 4        ; 8 / 14 ( 57 % ) ; 2.5V          ; --           ;
-; 5        ; 6 / 14 ( 43 % ) ; 2.5V          ; --           ;
-; 6        ; 2 / 10 ( 20 % ) ; 2.5V          ; --           ;
-; 7        ; 8 / 13 ( 62 % ) ; 2.5V          ; --           ;
-; 8        ; 6 / 12 ( 50 % ) ; 2.5V          ; --           ;
-+----------+-----------------+---------------+--------------+
++-------------------------------------------------------------+
+; I/O Bank Usage                                              ;
++----------+-------------------+---------------+--------------+
+; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ;
++----------+-------------------+---------------+--------------+
+; 1        ; 11 / 13 ( 85 % )  ; 2.5V          ; --           ;
+; 2        ; 6 / 8 ( 75 % )    ; 2.5V          ; --           ;
+; 3        ; 11 / 11 ( 100 % ) ; 2.5V          ; --           ;
+; 4        ; 14 / 14 ( 100 % ) ; 2.5V          ; --           ;
+; 5        ; 11 / 14 ( 79 % )  ; 2.5V          ; --           ;
+; 6        ; 10 / 10 ( 100 % ) ; 2.5V          ; --           ;
+; 7        ; 12 / 13 ( 92 % )  ; 2.5V          ; --           ;
+; 8        ; 11 / 12 ( 92 % )  ; 2.5V          ; --           ;
++----------+-------------------+---------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -473,17 +556,17 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage                                            ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
-; 1        ; 0          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 2        ; 1          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 1        ; 0          ; 1        ; sample_ori[22]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 2        ; 1          ; 1        ; sample_ori[9]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 3        ; 2          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 4        ; 3          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 4        ; 3          ; 1        ; SAD_saida[3]                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 5        ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 6        ; 5          ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
-; 7        ; 6          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 7        ; 6          ; 1        ; end_sad[0]                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 8        ; 7          ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 9        ; 9          ; 1        ; ^nSTATUS                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 10       ; 13         ; 1        ; sample_ori[7]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 11       ; 14         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 10       ; 13         ; 1        ; sample_ori[30]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 11       ; 14         ; 1        ; sample_can[26]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 12       ; 15         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 13       ; 16         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; 14       ; 17         ; 1        ; ^nCONFIG                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -496,74 +579,74 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ; 21       ; 22         ; 1        ; ^nCE                                                      ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 22       ; 23         ; 1        ; CLOCK                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 23       ; 24         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; 24       ; 25         ; 2        ; sample_can[6]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 25       ; 26         ; 2        ; sample_can[7]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 24       ; 25         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 25       ; 26         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 26       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 27       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 28       ; 31         ; 2        ; iniciar                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 28       ; 31         ; 2        ; pronto                                                    ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 30       ; 34         ; 2        ; reset                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 31       ; 36         ; 2        ; pronto                                                    ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 32       ; 39         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 33       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 34       ; 41         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 30       ; 34         ; 2        ; sample_ori[20]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 36         ; 2        ; sample_ori[15]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 32       ; 39         ; 2        ; SAD_saida[1]                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 33       ; 40         ; 2        ; sample_ori[8]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 34       ; 41         ; 2        ; sample_ori[23]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 35       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 36       ;            ;          ; GNDA1                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 37       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 38       ; 45         ; 3        ; sample_ori[4]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 39       ; 46         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 38       ; 45         ; 3        ; sample_ori[27]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 39       ; 46         ; 3        ; sample_ori[17]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 40       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 41       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 42       ; 52         ; 3        ; SAD_saida[1]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 43       ; 53         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 44       ; 54         ; 3        ; SAD_saida[9]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 52         ; 3        ; sample_can[17]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 43       ; 53         ; 3        ; sample_ori[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 44       ; 54         ; 3        ; sample_can[24]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 45       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 46       ; 58         ; 3        ; SAD_saida[4]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 46       ; 58         ; 3        ; sample_ori[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 47       ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 48       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 49       ; 68         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 50       ; 69         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 51       ; 70         ; 3        ; end_sad[0]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 52       ; 72         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 53       ; 73         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 54       ; 74         ; 4        ; sample_ori[6]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 55       ; 75         ; 4        ; SAD_saida[8]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 49       ; 68         ; 3        ; sample_can[15]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 50       ; 69         ; 3        ; end_sad[1]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 51       ; 70         ; 3        ; sample_can[16]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 52       ; 72         ; 3        ; SAD_saida[2]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 53       ; 73         ; 3        ; SAD_saida[4]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 54       ; 74         ; 4        ; sample_ori[14]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 55       ; 75         ; 4        ; sample_ori[3]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 56       ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 57       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 58       ; 80         ; 4        ; sample_can[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 59       ; 83         ; 4        ; SAD_saida[3]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 60       ; 84         ; 4        ; SAD_saida[0]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 58       ; 80         ; 4        ; sample_can[10]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 59       ; 83         ; 4        ; sample_can[9]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 60       ; 84         ; 4        ; sample_ori[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 61       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 62       ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 63       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 64       ; 89         ; 4        ; sample_can[5]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 65       ; 90         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; 66       ; 93         ; 4        ; sample_ori[3]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 67       ; 94         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 68       ; 96         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 69       ; 97         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 70       ; 98         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 71       ; 99         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 72       ; 100        ; 4        ; end_sad[2]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 73       ; 102        ; 5        ; SAD_saida[13]                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 74       ; 103        ; 5        ; sample_ori[2]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 75       ; 104        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 76       ; 106        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 77       ; 107        ; 5        ; SAD_saida[10]                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 64       ; 89         ; 4        ; sample_ori[12]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 65       ; 90         ; 4        ; sample_can[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 66       ; 93         ; 4        ; sample_can[31]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 67       ; 94         ; 4        ; sample_ori[21]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 68       ; 96         ; 4        ; sample_can[28]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 69       ; 97         ; 4        ; end_sad[2]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 70       ; 98         ; 4        ; SAD_saida[0]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 71       ; 99         ; 4        ; sample_ori[5]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 72       ; 100        ; 4        ; sample_ori[16]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 73       ; 102        ; 5        ; sample_ori[19]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 74       ; 103        ; 5        ; read_sad                                                  ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 75       ; 104        ; 5        ; sample_ori[24]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 76       ; 106        ; 5        ; sample_can[7]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 77       ; 107        ; 5        ; sample_can[12]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 78       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 79       ; 111        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 80       ; 113        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 80       ; 113        ; 5        ; SAD_saida[6]                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 81       ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 82       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 83       ; 117        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 83       ; 117        ; 5        ; sample_can[19]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 84       ; 118        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 85       ; 119        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 85       ; 119        ; 5        ; sample_ori[31]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 86       ; 120        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 87       ; 121        ; 5        ; SAD_saida[5]                                              ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 88       ; 125        ; 5        ; sample_can[3]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 89       ; 126        ; 5        ; sample_can[4]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 90       ; 127        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; 91       ; 128        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 87       ; 121        ; 5        ; sample_ori[4]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 88       ; 125        ; 5        ; sample_ori[25]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 89       ; 126        ; 5        ; sample_ori[26]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 90       ; 127        ; 6        ; iniciar                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 91       ; 128        ; 6        ; reset                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 92       ; 129        ; 6        ; ^CONF_DONE                                                ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 93       ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 94       ; 130        ; 6        ; ^MSEL0                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -571,53 +654,53 @@ The pin-out file can be found in C:/Users/lucas/Documents/Sistemas Digitais/GIT/
 ; 96       ; 131        ; 6        ; ^MSEL1                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 97       ; 132        ; 6        ; ^MSEL2                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 97       ; 133        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 98       ; 136        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 99       ; 137        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 100      ; 138        ; 6        ; sample_can[2]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 98       ; 136        ; 6        ; sample_can[23]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 99       ; 137        ; 6        ; sample_ori[6]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 100      ; 138        ; 6        ; sample_can[29]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 101      ; 139        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 102      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 103      ; 140        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 104      ; 141        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; 105      ; 142        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; 106      ; 146        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 103      ; 140        ; 6        ; sample_can[30]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 104      ; 141        ; 6        ; sample_ori[10]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 105      ; 142        ; 6        ; sample_can[20]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 106      ; 146        ; 6        ; sample_can[8]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 107      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 108      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 109      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 110      ; 152        ; 7        ; SAD_saida[6]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 110      ; 152        ; 7        ; sample_can[18]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 111      ; 154        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 112      ; 155        ; 7        ; end_sad[5]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 113      ; 156        ; 7        ; SAD_saida[2]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 114      ; 157        ; 7        ; sample_ori[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 115      ; 158        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 112      ; 155        ; 7        ; sample_can[3]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 113      ; 156        ; 7        ; sample_ori[11]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 114      ; 157        ; 7        ; sample_can[13]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 115      ; 158        ; 7        ; sample_ori[28]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 116      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 117      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 118      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 119      ; 163        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; 120      ; 164        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 121      ; 165        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 119      ; 163        ; 7        ; sample_ori[18]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 120      ; 164        ; 7        ; sample_ori[7]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 121      ; 165        ; 7        ; SAD_saida[5]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 122      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 123      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 124      ; 173        ; 7        ; SAD_saida[7]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 125      ; 174        ; 7        ; end_sad[1]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 126      ; 175        ; 7        ; SAD_saida[11]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 127      ; 176        ; 7        ; sample_ori[5]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 128      ; 177        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 129      ; 178        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 124      ; 173        ; 7        ; sample_can[25]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 125      ; 174        ; 7        ; sample_ori[29]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 126      ; 175        ; 7        ; SAD_saida[7]                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 127      ; 176        ; 7        ; sample_can[5]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 128      ; 177        ; 8        ; sample_can[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 129      ; 178        ; 8        ; sample_can[4]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 130      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 131      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 132      ; 181        ; 8        ; read_sad                                                  ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 133      ; 182        ; 8        ; sample_ori[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 132      ; 181        ; 8        ; sample_can[21]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 133      ; 182        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; 134      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 135      ; 185        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; 135      ; 185        ; 8        ; sample_ori[13]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 136      ; 187        ; 8        ; end_sad[3]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 137      ; 190        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 138      ; 191        ; 8        ; end_sad[4]                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 137      ; 190        ; 8        ; sample_can[22]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 138      ; 191        ; 8        ; sample_can[11]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 139      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; 140      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 141      ; 195        ; 8        ; SAD_saida[12]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; 142      ; 201        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 143      ; 202        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; 144      ; 203        ; 8        ; sample_can[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 141      ; 195        ; 8        ; sample_can[27]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 142      ; 201        ; 8        ; sample_can[6]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 143      ; 202        ; 8        ; sample_can[14]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; 144      ; 203        ; 8        ; sample_can[0]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; EPAD     ;            ;          ; GND                                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -628,90 +711,174 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Topo                      ; 7 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 41   ; 0            ; 3 (0)        ; 2 (0)             ; 2 (0)            ; |Topo               ; work         ;
+; |Topo                      ; 7 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 81   ; 0            ; 3 (0)        ; 2 (0)             ; 2 (0)            ; |Topo               ; work         ;
 ;    |sad_bc:V2|             ; 7 (7)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 2 (2)             ; 2 (2)            ; |Topo|sad_bc:V2     ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                           ;
-+---------------+----------+---------------+---------------+-----------------------+-----+------+
-; Name          ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
-+---------------+----------+---------------+---------------+-----------------------+-----+------+
-; sample_ori[0] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[1] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[2] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[3] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[4] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[5] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[6] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_ori[7] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[0] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[1] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[2] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[3] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[4] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[5] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[6] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; sample_can[7] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[0]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[1]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[2]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[3]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[4]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[5]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[6]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[7]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[8]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[9]  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[10] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[11] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[12] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; SAD_saida[13] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; end_sad[0]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; end_sad[1]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; end_sad[2]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; end_sad[3]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; end_sad[4]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; end_sad[5]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; read_sad      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; pronto        ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; iniciar       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; CLOCK         ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; reset         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-+---------------+----------+---------------+---------------+-----------------------+-----+------+
++------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                            ;
++----------------+----------+---------------+---------------+-----------------------+-----+------+
+; Name           ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
++----------------+----------+---------------+---------------+-----------------------+-----+------+
+; sample_ori[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[1]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[2]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[3]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[4]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[5]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[6]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[7]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[8]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[9]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[10] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[11] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[12] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[13] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[14] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[15] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[16] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[17] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[18] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[19] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[20] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[21] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[22] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[23] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[24] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[25] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[26] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[27] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[28] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[29] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[30] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_ori[31] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[0]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[1]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[2]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[3]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[4]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[5]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[6]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[7]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[8]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[9]  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[10] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[11] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[12] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[13] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[14] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[15] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[16] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[17] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[18] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[19] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[20] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[21] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[22] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[23] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[24] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[25] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[26] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[27] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[28] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[29] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[30] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; sample_can[31] ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[0]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[1]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[2]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[3]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[4]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[5]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[6]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SAD_saida[7]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; end_sad[0]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; end_sad[1]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; end_sad[2]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; end_sad[3]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; read_sad       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; pronto         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; iniciar        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; CLOCK          ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; reset          ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
++----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                             ;
-+------------------------------+-------------------+---------+
-; Source Pin / Fanout          ; Pad To Core Index ; Setting ;
-+------------------------------+-------------------+---------+
-; sample_ori[0]                ;                   ;         ;
-; sample_ori[1]                ;                   ;         ;
-; sample_ori[2]                ;                   ;         ;
-; sample_ori[3]                ;                   ;         ;
-; sample_ori[4]                ;                   ;         ;
-; sample_ori[5]                ;                   ;         ;
-; sample_ori[6]                ;                   ;         ;
-; sample_ori[7]                ;                   ;         ;
-; sample_can[0]                ;                   ;         ;
-; sample_can[1]                ;                   ;         ;
-; sample_can[2]                ;                   ;         ;
-; sample_can[3]                ;                   ;         ;
-; sample_can[4]                ;                   ;         ;
-; sample_can[5]                ;                   ;         ;
-; sample_can[6]                ;                   ;         ;
-; sample_can[7]                ;                   ;         ;
-; iniciar                      ;                   ;         ;
-;      - sad_bc:V2|PE.S1~0     ; 0                 ; 6       ;
-;      - sad_bc:V2|REG~0       ; 0                 ; 6       ;
-;      - sad_bc:V2|Selector2~0 ; 0                 ; 6       ;
-; CLOCK                        ;                   ;         ;
-; reset                        ;                   ;         ;
-;      - sad_bc:V2|REG~0       ; 1                 ; 6       ;
-+------------------------------+-------------------+---------+
++---------------------------------------------------+
+; Pad To Core Delay Chain Fanout                    ;
++---------------------+-------------------+---------+
+; Source Pin / Fanout ; Pad To Core Index ; Setting ;
++---------------------+-------------------+---------+
+; sample_ori[0]       ;                   ;         ;
+; sample_ori[1]       ;                   ;         ;
+; sample_ori[2]       ;                   ;         ;
+; sample_ori[3]       ;                   ;         ;
+; sample_ori[4]       ;                   ;         ;
+; sample_ori[5]       ;                   ;         ;
+; sample_ori[6]       ;                   ;         ;
+; sample_ori[7]       ;                   ;         ;
+; sample_ori[8]       ;                   ;         ;
+; sample_ori[9]       ;                   ;         ;
+; sample_ori[10]      ;                   ;         ;
+; sample_ori[11]      ;                   ;         ;
+; sample_ori[12]      ;                   ;         ;
+; sample_ori[13]      ;                   ;         ;
+; sample_ori[14]      ;                   ;         ;
+; sample_ori[15]      ;                   ;         ;
+; sample_ori[16]      ;                   ;         ;
+; sample_ori[17]      ;                   ;         ;
+; sample_ori[18]      ;                   ;         ;
+; sample_ori[19]      ;                   ;         ;
+; sample_ori[20]      ;                   ;         ;
+; sample_ori[21]      ;                   ;         ;
+; sample_ori[22]      ;                   ;         ;
+; sample_ori[23]      ;                   ;         ;
+; sample_ori[24]      ;                   ;         ;
+; sample_ori[25]      ;                   ;         ;
+; sample_ori[26]      ;                   ;         ;
+; sample_ori[27]      ;                   ;         ;
+; sample_ori[28]      ;                   ;         ;
+; sample_ori[29]      ;                   ;         ;
+; sample_ori[30]      ;                   ;         ;
+; sample_ori[31]      ;                   ;         ;
+; sample_can[0]       ;                   ;         ;
+; sample_can[1]       ;                   ;         ;
+; sample_can[2]       ;                   ;         ;
+; sample_can[3]       ;                   ;         ;
+; sample_can[4]       ;                   ;         ;
+; sample_can[5]       ;                   ;         ;
+; sample_can[6]       ;                   ;         ;
+; sample_can[7]       ;                   ;         ;
+; sample_can[8]       ;                   ;         ;
+; sample_can[9]       ;                   ;         ;
+; sample_can[10]      ;                   ;         ;
+; sample_can[11]      ;                   ;         ;
+; sample_can[12]      ;                   ;         ;
+; sample_can[13]      ;                   ;         ;
+; sample_can[14]      ;                   ;         ;
+; sample_can[15]      ;                   ;         ;
+; sample_can[16]      ;                   ;         ;
+; sample_can[17]      ;                   ;         ;
+; sample_can[18]      ;                   ;         ;
+; sample_can[19]      ;                   ;         ;
+; sample_can[20]      ;                   ;         ;
+; sample_can[21]      ;                   ;         ;
+; sample_can[22]      ;                   ;         ;
+; sample_can[23]      ;                   ;         ;
+; sample_can[24]      ;                   ;         ;
+; sample_can[25]      ;                   ;         ;
+; sample_can[26]      ;                   ;         ;
+; sample_can[27]      ;                   ;         ;
+; sample_can[28]      ;                   ;         ;
+; sample_can[29]      ;                   ;         ;
+; sample_can[30]      ;                   ;         ;
+; sample_can[31]      ;                   ;         ;
+; iniciar             ;                   ;         ;
+; CLOCK               ;                   ;         ;
+; reset               ;                   ;         ;
++---------------------+-------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -721,8 +888,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK               ; PIN_22            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; CLOCK               ; PIN_22            ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; sad_bc:V2|REG~0     ; LCCOMB_X1_Y11_N20 ; 4       ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; sad_bc:V2|WideOr1~0 ; LCCOMB_X1_Y11_N26 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; sad_bc:V2|REG~0     ; LCCOMB_X1_Y11_N28 ; 4       ; Async. clear ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; sad_bc:V2|WideOr1~0 ; LCCOMB_X1_Y11_N30 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
 +---------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -732,7 +899,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name            ; Location          ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; CLOCK           ; PIN_22            ; 3       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; sad_bc:V2|REG~0 ; LCCOMB_X1_Y11_N20 ; 4       ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
+; sad_bc:V2|REG~0 ; LCCOMB_X1_Y11_N28 ; 4       ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
 +-----------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -763,11 +930,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Block interconnects   ; 9 / 32,401 ( < 1 % ) ;
 ; C16 interconnects     ; 0 / 1,326 ( 0 % )    ;
 ; C4 interconnects      ; 7 / 21,816 ( < 1 % ) ;
-; Direct links          ; 2 / 32,401 ( < 1 % ) ;
+; Direct links          ; 1 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 2 / 10 ( 20 % )      ;
 ; Local interconnects   ; 6 / 10,320 ( < 1 % ) ;
-; R24 interconnects     ; 0 / 1,289 ( 0 % )    ;
-; R4 interconnects      ; 2 / 28,186 ( < 1 % ) ;
+; R24 interconnects     ; 4 / 1,289 ( < 1 % )  ;
+; R4 interconnects      ; 8 / 28,186 ( < 1 % ) ;
 +-----------------------+----------------------+
 
 
@@ -907,9 +1074,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 41        ; 0            ; 0            ; 41        ; 41        ; 0            ; 22           ; 0            ; 0            ; 19           ; 0            ; 22           ; 19           ; 0            ; 0            ; 0            ; 22           ; 0            ; 0            ; 0            ; 0            ; 0            ; 41        ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 81        ; 0            ; 0            ; 81        ; 81        ; 0            ; 14           ; 0            ; 0            ; 67           ; 0            ; 14           ; 67           ; 0            ; 0            ; 0            ; 14           ; 0            ; 0            ; 0            ; 0            ; 0            ; 81        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 41           ; 41           ; 41           ; 41           ; 41           ; 0         ; 41           ; 41           ; 0         ; 0         ; 41           ; 19           ; 41           ; 41           ; 22           ; 41           ; 19           ; 22           ; 41           ; 41           ; 41           ; 19           ; 41           ; 41           ; 41           ; 41           ; 41           ; 0         ; 41           ; 41           ;
+; Total Inapplicable ; 81           ; 81           ; 81           ; 81           ; 81           ; 0         ; 81           ; 81           ; 0         ; 0         ; 81           ; 67           ; 81           ; 81           ; 14           ; 81           ; 67           ; 14           ; 81           ; 81           ; 81           ; 67           ; 81           ; 81           ; 81           ; 81           ; 81           ; 0         ; 81           ; 81           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; sample_ori[0]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_ori[1]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -919,6 +1086,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sample_ori[5]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_ori[6]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_ori[7]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[8]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[9]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[10]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[11]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[12]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[13]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[14]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[15]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[16]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[17]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[18]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[19]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[20]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[21]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[22]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[23]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[24]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[25]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[26]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[27]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[28]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[29]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[30]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_ori[31]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_can[0]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_can[1]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_can[2]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -927,6 +1118,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sample_can[5]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_can[6]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; sample_can[7]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[8]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[9]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[10]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[11]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[12]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[13]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[14]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[15]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[16]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[17]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[18]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[19]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[20]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[21]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[22]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[23]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[24]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[25]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[26]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[27]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[28]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[29]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[30]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; sample_can[31]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SAD_saida[0]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SAD_saida[1]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SAD_saida[2]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -935,18 +1150,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SAD_saida[5]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SAD_saida[6]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SAD_saida[7]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SAD_saida[8]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SAD_saida[9]       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SAD_saida[10]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SAD_saida[11]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SAD_saida[12]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SAD_saida[13]      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; end_sad[0]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; end_sad[1]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; end_sad[2]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; end_sad[3]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; end_sad[4]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; end_sad[5]         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; read_sad           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; pronto             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; iniciar            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1040,7 +1247,7 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location 13
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location 101
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 41 pins of 41 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 81 pins of 81 total pins
     Info (169086): Pin sample_ori[0] not assigned to an exact location on the device
     Info (169086): Pin sample_ori[1] not assigned to an exact location on the device
     Info (169086): Pin sample_ori[2] not assigned to an exact location on the device
@@ -1049,6 +1256,30 @@ Critical Warning (169085): No exact pin location assignment(s) for 41 pins of 41
     Info (169086): Pin sample_ori[5] not assigned to an exact location on the device
     Info (169086): Pin sample_ori[6] not assigned to an exact location on the device
     Info (169086): Pin sample_ori[7] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[8] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[9] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[10] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[11] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[12] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[13] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[14] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[15] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[16] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[17] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[18] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[19] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[20] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[21] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[22] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[23] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[24] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[25] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[26] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[27] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[28] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[29] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[30] not assigned to an exact location on the device
+    Info (169086): Pin sample_ori[31] not assigned to an exact location on the device
     Info (169086): Pin sample_can[0] not assigned to an exact location on the device
     Info (169086): Pin sample_can[1] not assigned to an exact location on the device
     Info (169086): Pin sample_can[2] not assigned to an exact location on the device
@@ -1057,6 +1288,30 @@ Critical Warning (169085): No exact pin location assignment(s) for 41 pins of 41
     Info (169086): Pin sample_can[5] not assigned to an exact location on the device
     Info (169086): Pin sample_can[6] not assigned to an exact location on the device
     Info (169086): Pin sample_can[7] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[8] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[9] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[10] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[11] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[12] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[13] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[14] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[15] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[16] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[17] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[18] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[19] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[20] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[21] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[22] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[23] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[24] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[25] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[26] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[27] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[28] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[29] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[30] not assigned to an exact location on the device
+    Info (169086): Pin sample_can[31] not assigned to an exact location on the device
     Info (169086): Pin SAD_saida[0] not assigned to an exact location on the device
     Info (169086): Pin SAD_saida[1] not assigned to an exact location on the device
     Info (169086): Pin SAD_saida[2] not assigned to an exact location on the device
@@ -1065,18 +1320,10 @@ Critical Warning (169085): No exact pin location assignment(s) for 41 pins of 41
     Info (169086): Pin SAD_saida[5] not assigned to an exact location on the device
     Info (169086): Pin SAD_saida[6] not assigned to an exact location on the device
     Info (169086): Pin SAD_saida[7] not assigned to an exact location on the device
-    Info (169086): Pin SAD_saida[8] not assigned to an exact location on the device
-    Info (169086): Pin SAD_saida[9] not assigned to an exact location on the device
-    Info (169086): Pin SAD_saida[10] not assigned to an exact location on the device
-    Info (169086): Pin SAD_saida[11] not assigned to an exact location on the device
-    Info (169086): Pin SAD_saida[12] not assigned to an exact location on the device
-    Info (169086): Pin SAD_saida[13] not assigned to an exact location on the device
     Info (169086): Pin end_sad[0] not assigned to an exact location on the device
     Info (169086): Pin end_sad[1] not assigned to an exact location on the device
     Info (169086): Pin end_sad[2] not assigned to an exact location on the device
     Info (169086): Pin end_sad[3] not assigned to an exact location on the device
-    Info (169086): Pin end_sad[4] not assigned to an exact location on the device
-    Info (169086): Pin end_sad[5] not assigned to an exact location on the device
     Info (169086): Pin read_sad not assigned to an exact location on the device
     Info (169086): Pin pronto not assigned to an exact location on the device
     Info (169086): Pin iniciar not assigned to an exact location on the device
@@ -1098,7 +1345,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 40 (unused VREF, 2.5V VCCIO, 18 input, 22 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 80 (unused VREF, 2.5V VCCIO, 66 input, 14 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1122,7 +1369,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1131,9 +1378,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v3/output_files/sad_v3.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4944 megabytes
-    Info: Processing ended: Wed May 15 22:49:21 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Thu May 16 20:16:57 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+

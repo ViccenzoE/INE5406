@@ -18,11 +18,12 @@ PORT(
 END ENTITY;
 
 ARCHITECTURE arc OF sad_bo IS
-	SIGNAL sig3, sig31, sig32, sig33, sig10 : SIGNED(7 downto 0);
-	SIGNAL sig1, sig11, sig12, sig13, sig14, sig15, sig16, sig17, sig4, sig41, sig42, sig43: STD_LOGIC_VECTOR(7 downto 0);  -- Sinais de 8 bits, lado direito do bloco operacional
-	SIGNAL sig51, sig52 : STD_LOGIC_VECTOR(9 downto 0);
+	SIGNAL sig3, sig31, sig32, sig33: SIGNED(7 downto 0);
+	SIGNAL sig1, sig11, sig12, sig13, sig14, sig15, sig16, sig17, sig4, sig41, sig42, sig43 : STD_LOGIC_VECTOR(7 downto 0);  -- Sinais de 8 bits, lado direito do bloco operacional
+	SIGNAL sig51, sig52 : STD_LOGIC_VECTOR(8 downto 0);
 	SIGNAL sig6 : STD_LOGIC_VECTOR(9 downto 0);
-	SIGNAL sig7, sig8, sig9 : STD_LOGIC_VECTOR(13 downto 0);
+	SIGNAL sig7, sig9, sig10, sig101: STD_LOGIC_VECTOR(13 downto 0);
+	SIGNAL sig8 : STD_LOGIC_VECTOR(14 downto 0);
 	
 	SIGNAL ai1, ai2, ai3 : STD_LOGIC_VECTOR(4 downto 0);
 	
@@ -126,13 +127,15 @@ absto4 : abst generic map(N => 8)PORT MAP(sig33, sig43);
 som1 : somadornbits generic map(N => 8)PORT MAP('0', sig4, sig41, sig51);
 som12 : somadornbits generic map(N => 8)PORT MAP('0', sig42, sig43, sig52);
 
-som3 : somadornbits generic map(N => 14)PORT MAP('0', sig51, sig52, sig6);
+som3 : somadornbits generic map(N => 9)PORT MAP('0', sig51, sig52, sig6);
 
-mux1 : mux2para1 generic map(N => 14) PORT MAP(zsoma, sig6(13 downto 0), zero14, sig7);
+som4 : somadornbits generic map(N => 14) PORT MAP('0', sig10, sig7, sig8);
 
-soma : registrador generic map(N => 9) PORT MAP(csoma, sig7, sig8);
+mux1 : mux2para1 generic map(N => 14) PORT MAP(zsoma, sig8(13 downto 0), zero14, sig9);
 
-SAD_reg : registrador generic map(N => 14) PORT MAP(csad_reg, sig8, sig9);
+soma : registrador generic map(N => 14) PORT MAP(csoma, sig9, sig10);
+
+SAD_reg : registrador generic map(N => 14) PORT MAP(csad_reg, sig10, sig101);
 
 mux2 : mux2para1 generic map(N => 5) PORT MAP(zi, ai3, zero5, ai1);
 

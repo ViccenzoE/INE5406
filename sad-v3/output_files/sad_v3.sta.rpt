@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for sad_v3
-Wed May 15 22:49:27 2024
+Thu May 16 20:17:02 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -137,7 +137,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 838.22 MHz ; 250.0 MHz       ; CLOCK      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 839.63 MHz ; 250.0 MHz       ; CLOCK      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -153,8 +153,8 @@ HTML report is unavailable in plain text report export.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; sad_bc:V2|EA.S0 ; -1.528 ; -1.528        ;
-; CLOCK           ; -0.193 ; -0.238        ;
+; sad_bc:V2|EA.S0 ; -1.505 ; -1.505        ;
+; CLOCK           ; -0.191 ; -0.232        ;
 +-----------------+--------+---------------+
 
 
@@ -163,8 +163,8 @@ HTML report is unavailable in plain text report export.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; CLOCK           ; -0.187 ; -0.229        ;
-; sad_bc:V2|EA.S0 ; 1.280  ; 0.000         ;
+; CLOCK           ; -0.130 ; -0.145        ;
+; sad_bc:V2|EA.S0 ; 1.256  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -186,7 +186,7 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS          ;
 +-----------------+--------+------------------------+
 ; CLOCK           ; -3.000 ; -8.140                 ;
-; sad_bc:V2|EA.S0 ; 0.419  ; 0.000                  ;
+; sad_bc:V2|EA.S0 ; 0.420  ; 0.000                  ;
 +-----------------+--------+------------------------+
 
 
@@ -195,7 +195,7 @@ No paths to report.
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node        ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
-; -1.528 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 1.000        ; -0.762     ; 0.742      ;
+; -1.505 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 1.000        ; -0.738     ; 0.742      ;
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 
 
@@ -204,13 +204,13 @@ No paths to report.
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
-; -0.193 ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 1.000        ; -0.072     ; 1.119      ;
-; -0.045 ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 1.000        ; -0.072     ; 0.971      ;
-; 0.014  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 2.374      ; 3.090      ;
-; 0.242  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 1.715      ; 2.203      ;
-; 0.295  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 1.000        ; 0.601      ; 1.304      ;
-; 0.604  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 2.374      ; 3.000      ;
-; 0.821  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 1.715      ; 2.124      ;
+; -0.191 ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 1.000        ; -0.072     ; 1.117      ;
+; -0.041 ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 1.000        ; -0.072     ; 0.967      ;
+; 0.098  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 1.715      ; 2.347      ;
+; 0.200  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 2.374      ; 2.904      ;
+; 0.294  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 1.000        ; 0.601      ; 1.305      ;
+; 0.637  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 1.715      ; 2.308      ;
+; 0.716  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 2.374      ; 2.888      ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 
 
@@ -219,13 +219,13 @@ No paths to report.
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
-; -0.187 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 1.773      ; 2.024      ;
-; -0.042 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 2.460      ; 2.856      ;
+; -0.130 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 2.460      ; 2.768      ;
+; -0.015 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 1.773      ; 2.196      ;
 ; 0.162  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 0.000        ; 0.745      ; 1.093      ;
-; 0.376  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 1.773      ; 2.087      ;
-; 0.535  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 2.460      ; 2.933      ;
-; 0.611  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 0.000        ; 0.072      ; 0.869      ;
-; 0.763  ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 0.000        ; 0.072      ; 1.021      ;
+; 0.375  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 2.460      ; 2.773      ;
+; 0.524  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 1.773      ; 2.235      ;
+; 0.607  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 0.000        ; 0.072      ; 0.865      ;
+; 0.760  ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 0.000        ; 0.072      ; 1.018      ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 
 
@@ -234,7 +234,7 @@ No paths to report.
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 ; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
-; 1.280 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 0.000        ; -0.662     ; 0.638      ;
+; 1.256 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 0.000        ; -0.638     ; 0.638      ;
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 
 
@@ -280,8 +280,8 @@ No paths to report.
 +-------+--------------+----------------+------------------+-----------------+------------+----------------------+
 ; Slack ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target               ;
 +-------+--------------+----------------+------------------+-----------------+------------+----------------------+
-; 0.419 ; 0.419        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
-; 0.425 ; 0.425        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
+; 0.420 ; 0.420        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
+; 0.426 ; 0.426        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
 ; 0.450 ; 0.450        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; sad_bc:V2|done       ;
 ; 0.457 ; 0.457        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Fall       ; V2|done|datac        ;
 ; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|EA.S0|q           ;
@@ -298,7 +298,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; iniciar   ; CLOCK      ; 3.314 ; 3.608 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; 1.952 ; 2.073 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -307,7 +307,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; iniciar   ; CLOCK      ; -1.649 ; -1.940 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; -0.624 ; -0.791 ; Rise       ; CLOCK           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -316,7 +316,7 @@ No paths to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 5.294 ; 5.386 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 4.039 ; 4.000 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -325,7 +325,7 @@ No paths to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 5.223 ; 5.316 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 3.968 ; 3.931 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -340,7 +340,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 937.21 MHz ; 250.0 MHz       ; CLOCK      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 938.97 MHz ; 250.0 MHz       ; CLOCK      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -350,8 +350,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; sad_bc:V2|EA.S0 ; -1.357 ; -1.357        ;
-; CLOCK           ; -0.067 ; -0.067        ;
+; sad_bc:V2|EA.S0 ; -1.341 ; -1.341        ;
+; CLOCK           ; -0.065 ; -0.065        ;
 +-----------------+--------+---------------+
 
 
@@ -360,8 +360,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; CLOCK           ; -0.232 ; -0.267        ;
-; sad_bc:V2|EA.S0 ; 1.231  ; 0.000         ;
+; CLOCK           ; -0.096 ; -0.157        ;
+; sad_bc:V2|EA.S0 ; 1.209  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -383,7 +383,7 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
 ; CLOCK           ; -3.000 ; -8.140                ;
-; sad_bc:V2|EA.S0 ; 0.431  ; 0.000                 ;
+; sad_bc:V2|EA.S0 ; 0.430  ; 0.000                 ;
 +-----------------+--------+-----------------------+
 
 
@@ -392,7 +392,7 @@ No paths to report.
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node        ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
-; -1.357 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 1.000        ; -0.758     ; 0.670      ;
+; -1.341 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 1.000        ; -0.737     ; 0.672      ;
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 
 
@@ -401,13 +401,13 @@ No paths to report.
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
-; -0.067 ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 1.000        ; -0.065     ; 1.001      ;
-; 0.048  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 1.000        ; -0.065     ; 0.886      ;
-; 0.105  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 2.197      ; 2.804      ;
-; 0.318  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 1.623      ; 2.017      ;
+; -0.065 ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 1.000        ; -0.065     ; 0.999      ;
+; 0.052  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 1.000        ; -0.065     ; 0.882      ;
+; 0.189  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 1.623      ; 2.146      ;
+; 0.271  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 2.197      ; 2.638      ;
 ; 0.357  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 1.000        ; 0.522      ; 1.164      ;
-; 0.628  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 2.197      ; 2.781      ;
-; 0.902  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 1.623      ; 1.933      ;
+; 0.714  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 2.197      ; 2.695      ;
+; 0.720  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 1.623      ; 2.115      ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 
 
@@ -416,13 +416,13 @@ No paths to report.
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
-; -0.232 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 1.675      ; 1.847      ;
-; -0.035 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 2.274      ; 2.643      ;
-; 0.188  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 0.000        ; 0.651      ; 1.010      ;
-; 0.334  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 1.675      ; 1.913      ;
-; 0.484  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 2.274      ; 2.662      ;
-; 0.558  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 0.000        ; 0.065      ; 0.794      ;
-; 0.694  ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 0.000        ; 0.065      ; 0.930      ;
+; -0.096 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 2.274      ; 2.582      ;
+; -0.061 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 1.675      ; 2.018      ;
+; 0.187  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 0.000        ; 0.651      ; 1.009      ;
+; 0.341  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 2.274      ; 2.519      ;
+; 0.466  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 1.675      ; 2.045      ;
+; 0.555  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 0.000        ; 0.065      ; 0.791      ;
+; 0.692  ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 0.000        ; 0.065      ; 0.928      ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 
 
@@ -431,7 +431,7 @@ No paths to report.
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 ; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
-; 1.231 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 0.000        ; -0.668     ; 0.583      ;
+; 1.209 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 0.000        ; -0.646     ; 0.583      ;
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 
 
@@ -477,16 +477,16 @@ No paths to report.
 +-------+--------------+----------------+------------------+-----------------+------------+----------------------+
 ; Slack ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target               ;
 +-------+--------------+----------------+------------------+-----------------+------------+----------------------+
-; 0.431 ; 0.431        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
-; 0.436 ; 0.436        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
+; 0.430 ; 0.430        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
+; 0.435 ; 0.435        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
 ; 0.448 ; 0.448        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; sad_bc:V2|done       ;
 ; 0.462 ; 0.462        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Fall       ; V2|done|datac        ;
 ; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|EA.S0|q           ;
 ; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; V2|EA.S0|q           ;
 ; 0.536 ; 0.536        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|done|datac        ;
 ; 0.549 ; 0.549        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; sad_bc:V2|done       ;
-; 0.561 ; 0.561        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
-; 0.566 ; 0.566        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
+; 0.562 ; 0.562        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
+; 0.567 ; 0.567        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
 +-------+--------------+----------------+------------------+-----------------+------------+----------------------+
 
 
@@ -495,7 +495,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; iniciar   ; CLOCK      ; 2.924 ; 3.101 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; 1.770 ; 1.953 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -504,7 +504,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; iniciar   ; CLOCK      ; -1.419 ; -1.623 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; -0.559 ; -0.818 ; Rise       ; CLOCK           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -513,7 +513,7 @@ No paths to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 5.151 ; 5.222 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 3.892 ; 3.836 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -522,7 +522,7 @@ No paths to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 5.086 ; 5.158 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 3.826 ; 3.772 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -537,8 +537,8 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; sad_bc:V2|EA.S0 ; -0.239 ; -0.239        ;
-; CLOCK           ; 0.143  ; 0.000         ;
+; sad_bc:V2|EA.S0 ; -0.227 ; -0.227        ;
+; CLOCK           ; 0.228  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -547,8 +547,8 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; CLOCK           ; -0.130 ; -0.184        ;
-; sad_bc:V2|EA.S0 ; 0.617  ; 0.000         ;
+; CLOCK           ; -0.116 ; -0.172        ;
+; sad_bc:V2|EA.S0 ; 0.602  ; 0.000         ;
 +-----------------+--------+---------------+
 
 
@@ -579,7 +579,7 @@ No paths to report.
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node        ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
-; -0.239 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 1.000        ; -0.389     ; 0.348      ;
+; -0.227 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 1.000        ; -0.376     ; 0.348      ;
 +--------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 
 
@@ -588,13 +588,13 @@ No paths to report.
 +-------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 ; Slack ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
-; 0.143 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 1.196      ; 1.645      ;
-; 0.401 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 0.833      ; 1.024      ;
-; 0.419 ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 1.000        ; -0.037     ; 0.531      ;
-; 0.508 ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 1.000        ; -0.037     ; 0.442      ;
+; 0.228 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 1.196      ; 1.560      ;
+; 0.326 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.500        ; 0.833      ; 1.099      ;
+; 0.421 ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 1.000        ; -0.037     ; 0.529      ;
+; 0.513 ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 1.000        ; -0.037     ; 0.437      ;
 ; 0.693 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 1.000        ; 0.333      ; 0.627      ;
-; 0.826 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 1.196      ; 1.462      ;
-; 0.934 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 0.833      ; 0.991      ;
+; 0.855 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 0.833      ; 1.070      ;
+; 0.897 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 1.000        ; 1.196      ; 1.391      ;
 +-------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 
 
@@ -603,13 +603,13 @@ No paths to report.
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
-; -0.130 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 0.863      ; 0.942      ;
-; -0.054 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 1.241      ; 1.396      ;
+; -0.116 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 1.241      ; 1.334      ;
+; -0.056 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; 0.000        ; 0.863      ; 1.016      ;
 ; 0.001  ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S2 ; CLOCK           ; CLOCK       ; 0.000        ; 0.408      ; 0.493      ;
-; 0.269  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 0.000        ; 0.037      ; 0.390      ;
-; 0.347  ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 0.000        ; 0.037      ; 0.468      ;
-; 0.392  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 0.863      ; 0.964      ;
-; 0.613  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 1.241      ; 1.563      ;
+; 0.266  ; sad_bc:V2|EA.S2 ; sad_bc:V2|EA.S5 ; CLOCK           ; CLOCK       ; 0.000        ; 0.037      ; 0.387      ;
+; 0.345  ; sad_bc:V2|EA.S5 ; sad_bc:V2|EA.S0 ; CLOCK           ; CLOCK       ; 0.000        ; 0.037      ; 0.466      ;
+; 0.472  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S1 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 0.863      ; 1.044      ;
+; 0.540  ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; sad_bc:V2|EA.S0 ; CLOCK       ; -0.500       ; 1.241      ; 1.490      ;
 +--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
 
 
@@ -618,7 +618,7 @@ No paths to report.
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 ; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
-; 0.617 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 0.000        ; -0.340     ; 0.297      ;
+; 0.602 ; sad_bc:V2|EA.S1 ; sad_bc:V2|done ; CLOCK        ; sad_bc:V2|EA.S0 ; 0.000        ; -0.326     ; 0.296      ;
 +-------+-----------------+----------------+--------------+-----------------+--------------+------------+------------+
 
 
@@ -670,10 +670,10 @@ No paths to report.
 ; 0.488 ; 0.488        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; sad_bc:V2|done       ;
 ; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|EA.S0|q           ;
 ; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Rise       ; V2|EA.S0|q           ;
-; 0.511 ; 0.511        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; sad_bc:V2|done       ;
-; 0.514 ; 0.514        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|done|datac        ;
-; 0.534 ; 0.534        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
-; 0.538 ; 0.538        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
+; 0.512 ; 0.512        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; sad_bc:V2|done       ;
+; 0.515 ; 0.515        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|done|datac        ;
+; 0.535 ; 0.535        ; 0.000          ; Low Pulse Width  ; sad_bc:V2|EA.S0 ; Fall       ; V2|WideOr1~0|combout ;
+; 0.539 ; 0.539        ; 0.000          ; High Pulse Width ; sad_bc:V2|EA.S0 ; Rise       ; V2|WideOr1~0|datac   ;
 +-------+--------------+----------------+------------------+-----------------+------------+----------------------+
 
 
@@ -682,7 +682,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; iniciar   ; CLOCK      ; 1.659 ; 2.255 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; 0.991 ; 1.301 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -691,7 +691,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; iniciar   ; CLOCK      ; -0.831 ; -1.402 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; -0.337 ; -0.631 ; Rise       ; CLOCK           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -700,7 +700,7 @@ No paths to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 3.047 ; 3.152 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 2.169 ; 2.237 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -709,7 +709,7 @@ No paths to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 3.014 ; 3.118 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 2.135 ; 2.203 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -724,12 +724,12 @@ No synchronizer chains to report.
 +------------------+--------+--------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -1.528 ; -0.232 ; N/A      ; N/A     ; -3.000              ;
-;  CLOCK           ; -0.193 ; -0.232 ; N/A      ; N/A     ; -3.000              ;
-;  sad_bc:V2|EA.S0 ; -1.528 ; 0.617  ; N/A      ; N/A     ; 0.419               ;
-; Design-wide TNS  ; -1.766 ; -0.267 ; 0.0      ; 0.0     ; -8.14               ;
-;  CLOCK           ; -0.238 ; -0.267 ; N/A      ; N/A     ; -8.140              ;
-;  sad_bc:V2|EA.S0 ; -1.528 ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+; Worst-case Slack ; -1.505 ; -0.130 ; N/A      ; N/A     ; -3.000              ;
+;  CLOCK           ; -0.191 ; -0.130 ; N/A      ; N/A     ; -3.000              ;
+;  sad_bc:V2|EA.S0 ; -1.505 ; 0.602  ; N/A      ; N/A     ; 0.420               ;
+; Design-wide TNS  ; -1.737 ; -0.172 ; 0.0      ; 0.0     ; -8.14               ;
+;  CLOCK           ; -0.232 ; -0.172 ; N/A      ; N/A     ; -8.140              ;
+;  sad_bc:V2|EA.S0 ; -1.505 ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 +------------------+--------+--------+----------+---------+---------------------+
 
 
@@ -738,7 +738,7 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; iniciar   ; CLOCK      ; 3.314 ; 3.608 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; 1.952 ; 2.073 ; Rise       ; CLOCK           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -747,7 +747,7 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; iniciar   ; CLOCK      ; -0.831 ; -1.402 ; Rise       ; CLOCK           ;
+; iniciar   ; CLOCK      ; -0.337 ; -0.631 ; Rise       ; CLOCK           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -756,7 +756,7 @@ No synchronizer chains to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 5.294 ; 5.386 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 4.039 ; 4.000 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -765,7 +765,7 @@ No synchronizer chains to report.
 +-----------+-----------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+-----------------+-------+-------+------------+-----------------+
-; pronto    ; sad_bc:V2|EA.S0 ; 3.014 ; 3.118 ; Rise       ; sad_bc:V2|EA.S0 ;
+; pronto    ; sad_bc:V2|EA.S0 ; 2.135 ; 2.203 ; Rise       ; sad_bc:V2|EA.S0 ;
 +-----------+-----------------+-------+-------+------------+-----------------+
 
 
@@ -782,18 +782,10 @@ No synchronizer chains to report.
 ; SAD_saida[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; SAD_saida[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; SAD_saida[7]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; SAD_saida[8]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; SAD_saida[9]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; SAD_saida[10] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; SAD_saida[11] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; SAD_saida[12] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; SAD_saida[13] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; end_sad[0]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; end_sad[1]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; end_sad[2]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; end_sad[3]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; end_sad[4]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; end_sad[5]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; read_sad      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; pronto        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -814,6 +806,30 @@ No synchronizer chains to report.
 ; sample_ori[5]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_ori[6]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_ori[7]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[8]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[9]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[10]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[11]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[12]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[13]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[14]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[15]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[16]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[17]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[18]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[19]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[20]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[21]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[22]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[23]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[24]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[25]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[26]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[27]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[28]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[29]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[30]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_ori[31]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_can[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_can[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_can[2]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -822,6 +838,30 @@ No synchronizer chains to report.
 ; sample_can[5]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_can[6]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; sample_can[7]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[8]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[9]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[10]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[11]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[12]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[13]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[14]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[15]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[16]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[17]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[18]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[19]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[20]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[21]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[22]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[23]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[24]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[25]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[26]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[27]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[28]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[29]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[30]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sample_can[31]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; iniciar                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; CLOCK                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -837,27 +877,19 @@ No synchronizer chains to report.
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; SAD_saida[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.36 V              ; -0.00376 V          ; 0.11 V                               ; 0.005 V                              ; 4.55e-10 s                  ; 4.36e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.36 V             ; -0.00376 V         ; 0.11 V                              ; 0.005 V                             ; 4.55e-10 s                 ; 4.36e-10 s                 ; Yes                       ; Yes                       ;
 ; SAD_saida[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.33 V              ; -0.00259 V          ; 0.108 V                              ; 0.056 V                              ; 3.55e-09 s                  ; 3.31e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.33 V             ; -0.00259 V         ; 0.108 V                             ; 0.056 V                             ; 3.55e-09 s                 ; 3.31e-09 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.35 V              ; -0.00828 V          ; 0.118 V                              ; 0.032 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.35 V             ; -0.00828 V         ; 0.118 V                             ; 0.032 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.36 V              ; -0.00376 V          ; 0.11 V                               ; 0.005 V                              ; 4.55e-10 s                  ; 4.36e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.36 V             ; -0.00376 V         ; 0.11 V                              ; 0.005 V                             ; 4.55e-10 s                 ; 4.36e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.33 V              ; -0.0027 V           ; 0.131 V                              ; 0.055 V                              ; 3.54e-09 s                  ; 3.29e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.33 V             ; -0.0027 V          ; 0.131 V                             ; 0.055 V                             ; 3.54e-09 s                 ; 3.29e-09 s                 ; Yes                       ; Yes                       ;
 ; SAD_saida[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.36 V              ; -0.00376 V          ; 0.11 V                               ; 0.005 V                              ; 4.55e-10 s                  ; 4.36e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.36 V             ; -0.00376 V         ; 0.11 V                              ; 0.005 V                             ; 4.55e-10 s                 ; 4.36e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.36 V              ; -0.00376 V          ; 0.11 V                               ; 0.005 V                              ; 4.55e-10 s                  ; 4.36e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.36 V             ; -0.00376 V         ; 0.11 V                              ; 0.005 V                             ; 4.55e-10 s                 ; 4.36e-10 s                 ; Yes                       ; Yes                       ;
-; end_sad[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; end_sad[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.33 V              ; -0.0027 V           ; 0.131 V                              ; 0.055 V                              ; 3.54e-09 s                  ; 3.29e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.33 V             ; -0.0027 V          ; 0.131 V                             ; 0.055 V                             ; 3.54e-09 s                 ; 3.29e-09 s                 ; Yes                       ; Yes                       ;
 ; end_sad[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; end_sad[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; end_sad[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.33 V              ; -0.00259 V          ; 0.108 V                              ; 0.056 V                              ; 3.55e-09 s                  ; 3.31e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.33 V             ; -0.00259 V         ; 0.108 V                             ; 0.056 V                             ; 3.55e-09 s                 ; 3.31e-09 s                 ; Yes                       ; Yes                       ;
-; end_sad[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; end_sad[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; read_sad      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.43e-07 V                   ; 2.35 V              ; -0.00795 V          ; 0.123 V                              ; 0.028 V                              ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.43e-07 V                  ; 2.35 V             ; -0.00795 V         ; 0.123 V                             ; 0.028 V                             ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; pronto        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.33 V              ; -0.0027 V           ; 0.131 V                              ; 0.055 V                              ; 3.54e-09 s                  ; 3.29e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.33 V             ; -0.0027 V          ; 0.131 V                             ; 0.055 V                             ; 3.54e-09 s                 ; 3.29e-09 s                 ; Yes                       ; Yes                       ;
+; read_sad      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.36 V              ; -0.00376 V          ; 0.11 V                               ; 0.005 V                              ; 4.55e-10 s                  ; 4.36e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.36 V             ; -0.00376 V         ; 0.11 V                              ; 0.005 V                             ; 4.55e-10 s                 ; 4.36e-10 s                 ; Yes                       ; Yes                       ;
+; pronto        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-07 V                   ; 2.35 V              ; -0.00828 V          ; 0.118 V                              ; 0.032 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-07 V                  ; 2.35 V             ; -0.00828 V         ; 0.118 V                             ; 0.032 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.92e-07 V                   ; 2.35 V              ; -0.0133 V           ; 0.084 V                              ; 0.028 V                              ; 4.31e-10 s                  ; 3.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.92e-07 V                  ; 2.35 V             ; -0.0133 V          ; 0.084 V                             ; 0.028 V                             ; 4.31e-10 s                 ; 3.59e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.8e-07 V                    ; 2.35 V              ; -0.00679 V          ; 0.09 V                               ; 0.045 V                              ; 6.2e-10 s                   ; 7.91e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.8e-07 V                   ; 2.35 V             ; -0.00679 V         ; 0.09 V                              ; 0.045 V                             ; 6.2e-10 s                  ; 7.91e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -869,27 +901,19 @@ No synchronizer chains to report.
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; SAD_saida[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.72 V              ; -0.0401 V           ; 0.163 V                              ; 0.091 V                              ; 2.71e-10 s                  ; 2.61e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.72 V             ; -0.0401 V          ; 0.163 V                             ; 0.091 V                             ; 2.71e-10 s                 ; 2.61e-10 s                 ; Yes                       ; Yes                       ;
 ; SAD_saida[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.64 V              ; -0.0115 V           ; 0.204 V                              ; 0.12 V                               ; 2.38e-09 s                  ; 2.24e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.64 V             ; -0.0115 V          ; 0.204 V                             ; 0.12 V                              ; 2.38e-09 s                 ; 2.24e-09 s                 ; No                        ; Yes                       ;
-; SAD_saida[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.71 V              ; -0.0354 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.14e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.71 V             ; -0.0354 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.14e-10 s                 ; No                        ; Yes                       ;
-; SAD_saida[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.72 V              ; -0.0401 V           ; 0.163 V                              ; 0.091 V                              ; 2.71e-10 s                  ; 2.61e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.72 V             ; -0.0401 V          ; 0.163 V                             ; 0.091 V                             ; 2.71e-10 s                 ; 2.61e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; SAD_saida[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.64 V              ; -0.0118 V           ; 0.201 V                              ; 0.175 V                              ; 2.38e-09 s                  ; 2.21e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.64 V             ; -0.0118 V          ; 0.201 V                             ; 0.175 V                             ; 2.38e-09 s                 ; 2.21e-09 s                 ; No                        ; Yes                       ;
 ; SAD_saida[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.72 V              ; -0.0401 V           ; 0.163 V                              ; 0.091 V                              ; 2.71e-10 s                  ; 2.61e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.72 V             ; -0.0401 V          ; 0.163 V                             ; 0.091 V                             ; 2.71e-10 s                 ; 2.61e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; SAD_saida[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.72 V              ; -0.0401 V           ; 0.163 V                              ; 0.091 V                              ; 2.71e-10 s                  ; 2.61e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.72 V             ; -0.0401 V          ; 0.163 V                             ; 0.091 V                             ; 2.71e-10 s                 ; 2.61e-10 s                 ; Yes                       ; Yes                       ;
-; end_sad[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; end_sad[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.64 V              ; -0.0118 V           ; 0.201 V                              ; 0.175 V                              ; 2.38e-09 s                  ; 2.21e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.64 V             ; -0.0118 V          ; 0.201 V                             ; 0.175 V                             ; 2.38e-09 s                 ; 2.21e-09 s                 ; No                        ; Yes                       ;
 ; end_sad[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; end_sad[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; end_sad[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.64 V              ; -0.0115 V           ; 0.204 V                              ; 0.12 V                               ; 2.38e-09 s                  ; 2.24e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.64 V             ; -0.0115 V          ; 0.204 V                             ; 0.12 V                              ; 2.38e-09 s                 ; 2.24e-09 s                 ; No                        ; Yes                       ;
-; end_sad[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; end_sad[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; read_sad      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; pronto        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.64 V              ; -0.0118 V           ; 0.201 V                              ; 0.175 V                              ; 2.38e-09 s                  ; 2.21e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.64 V             ; -0.0118 V          ; 0.201 V                             ; 0.175 V                             ; 2.38e-09 s                 ; 2.21e-09 s                 ; No                        ; Yes                       ;
+; read_sad      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.72 V              ; -0.0401 V           ; 0.163 V                              ; 0.091 V                              ; 2.71e-10 s                  ; 2.61e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.72 V             ; -0.0401 V          ; 0.163 V                             ; 0.091 V                             ; 2.71e-10 s                 ; 2.61e-10 s                 ; Yes                       ; Yes                       ;
+; pronto        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.7e-08 V                    ; 2.71 V              ; -0.0354 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.14e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.7e-08 V                   ; 2.71 V             ; -0.0354 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.14e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.2e-08 V                    ; 2.74 V              ; -0.061 V            ; 0.159 V                              ; 0.078 V                              ; 2.7e-10 s                   ; 2.2e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.2e-08 V                   ; 2.74 V             ; -0.061 V           ; 0.159 V                             ; 0.078 V                             ; 2.7e-10 s                  ; 2.2e-10 s                  ; No                        ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.52e-08 V                   ; 2.7 V               ; -0.0121 V           ; 0.274 V                              ; 0.034 V                              ; 3.18e-10 s                  ; 4.96e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.52e-08 V                  ; 2.7 V              ; -0.0121 V          ; 0.274 V                             ; 0.034 V                             ; 3.18e-10 s                 ; 4.96e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -951,7 +975,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 15 22:49:25 2024
+    Info: Processing started: Thu May 16 20:17:01 2024
 Info: Command: quartus_sta sad_v3 -c sad_v3
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -970,60 +994,60 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.528
+Info (332146): Worst-case setup slack is -1.505
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.528              -1.528 sad_bc:V2|EA.S0 
-    Info (332119):    -0.193              -0.238 CLOCK 
-Info (332146): Worst-case hold slack is -0.187
+    Info (332119):    -1.505              -1.505 sad_bc:V2|EA.S0 
+    Info (332119):    -0.191              -0.232 CLOCK 
+Info (332146): Worst-case hold slack is -0.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.187              -0.229 CLOCK 
-    Info (332119):     1.280               0.000 sad_bc:V2|EA.S0 
+    Info (332119):    -0.130              -0.145 CLOCK 
+    Info (332119):     1.256               0.000 sad_bc:V2|EA.S0 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -8.140 CLOCK 
-    Info (332119):     0.419               0.000 sad_bc:V2|EA.S0 
+    Info (332119):     0.420               0.000 sad_bc:V2|EA.S0 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.357
+Info (332146): Worst-case setup slack is -1.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.357              -1.357 sad_bc:V2|EA.S0 
-    Info (332119):    -0.067              -0.067 CLOCK 
-Info (332146): Worst-case hold slack is -0.232
+    Info (332119):    -1.341              -1.341 sad_bc:V2|EA.S0 
+    Info (332119):    -0.065              -0.065 CLOCK 
+Info (332146): Worst-case hold slack is -0.096
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.232              -0.267 CLOCK 
-    Info (332119):     1.231               0.000 sad_bc:V2|EA.S0 
+    Info (332119):    -0.096              -0.157 CLOCK 
+    Info (332119):     1.209               0.000 sad_bc:V2|EA.S0 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -8.140 CLOCK 
-    Info (332119):     0.431               0.000 sad_bc:V2|EA.S0 
+    Info (332119):     0.430               0.000 sad_bc:V2|EA.S0 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.239
+Info (332146): Worst-case setup slack is -0.227
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.239              -0.239 sad_bc:V2|EA.S0 
-    Info (332119):     0.143               0.000 CLOCK 
-Info (332146): Worst-case hold slack is -0.130
+    Info (332119):    -0.227              -0.227 sad_bc:V2|EA.S0 
+    Info (332119):     0.228               0.000 CLOCK 
+Info (332146): Worst-case hold slack is -0.116
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.130              -0.184 CLOCK 
-    Info (332119):     0.617               0.000 sad_bc:V2|EA.S0 
+    Info (332119):    -0.116              -0.172 CLOCK 
+    Info (332119):     0.602               0.000 sad_bc:V2|EA.S0 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1034,9 +1058,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4612 megabytes
-    Info: Processing ended: Wed May 15 22:49:27 2024
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4608 megabytes
+    Info: Processing ended: Thu May 16 20:17:02 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
