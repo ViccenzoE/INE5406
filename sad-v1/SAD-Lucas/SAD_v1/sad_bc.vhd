@@ -29,12 +29,8 @@ ENTITY sad_bc IS
 		clk : IN STD_LOGIC; -- ck
 		enable : IN STD_LOGIC; -- iniciar
 		reset : IN STD_LOGIC; -- reset
-		sample_ori : IN STD_LOGIC_VECTOR ((B-1)*P DOWNTO 0); -- Mem_A[end]
-		sample_can : IN STD_LOGIC_VECTOR ((B-1)*P DOWNTO 0); -- Mem_B[end]
 		menor : IN STD_LOGIC; -- menor que a quantia de linhas
 		read_mem : OUT STD_LOGIC; -- read
-		address : OUT STD_LOGIC_VECTOR (5 DOWNTO 0); -- end 5
-		sad_value : OUT STD_LOGIC_VECTOR ((B + 5) DOWNTO 0); -- SAD 13
 		done : OUT STD_LOGIC;
 		cpA, cpB, ci, zi, zsoma, csoma, csad_reg : OUT STD_LOGIC
 		);

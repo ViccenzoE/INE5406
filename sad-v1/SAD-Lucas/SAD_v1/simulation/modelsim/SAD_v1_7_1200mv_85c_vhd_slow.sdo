@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "sad_bc")
-  (DATE "05/15/2024 18:10:47")
+  (DATE "05/15/2024 21:07:10")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -41,8 +41,8 @@
     (INSTANCE \\read_mem\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (1247:1247:1247) (1197:1197:1197))
-        (IOPATH i o (2168:2168:2168) (2155:2155:2155))
+        (PORT i (867:867:867) (839:839:839))
+        (IOPATH i o (2239:2239:2239) (2229:2229:2229))
       )
     )
   )
@@ -51,8 +51,8 @@
     (INSTANCE \\done\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (713:713:713) (684:684:684))
-        (IOPATH i o (2249:2249:2249) (2239:2239:2239))
+        (PORT i (744:744:744) (745:745:745))
+        (IOPATH i o (3525:3525:3525) (3611:3611:3611))
       )
     )
   )
@@ -61,8 +61,8 @@
     (INSTANCE \\zi\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (1031:1031:1031) (973:973:973))
-        (IOPATH i o (2239:2239:2239) (2229:2229:2229))
+        (PORT i (1156:1156:1156) (1114:1114:1114))
+        (IOPATH i o (3525:3525:3525) (3611:3611:3611))
       )
     )
   )
@@ -71,8 +71,8 @@
     (INSTANCE \\zsoma\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (1031:1031:1031) (973:973:973))
-        (IOPATH i o (2239:2239:2239) (2229:2229:2229))
+        (PORT i (1154:1154:1154) (1138:1138:1138))
+        (IOPATH i o (2168:2168:2168) (2155:2155:2155))
       )
     )
   )
@@ -99,7 +99,7 @@
     (INSTANCE \\enable\~input\\)
     (DELAY
       (ABSOLUTE
-        (IOPATH i o (819:819:819) (924:924:924))
+        (IOPATH i o (809:809:809) (914:914:914))
       )
     )
   )
@@ -117,9 +117,9 @@
     (INSTANCE \\PE\.S5\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (3194:3194:3194) (3472:3472:3472))
-        (PORT datad (271:271:271) (356:356:356))
-        (IOPATH datab combout (389:389:389) (386:386:386))
+        (PORT dataa (3074:3074:3074) (3316:3316:3316))
+        (PORT datad (286:286:286) (360:360:360))
+        (IOPATH dataa combout (377:377:377) (382:382:382))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
     )
@@ -129,7 +129,7 @@
     (INSTANCE \\reset\~input\\)
     (DELAY
       (ABSOLUTE
-        (IOPATH i o (809:809:809) (914:914:914))
+        (IOPATH i o (799:799:799) (904:904:904))
       )
     )
   )
@@ -138,9 +138,9 @@
     (INSTANCE \\REG\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (3433:3433:3433) (3675:3675:3675))
-        (PORT datad (3079:3079:3079) (3347:3347:3347))
-        (IOPATH datab combout (441:441:441) (443:443:443))
+        (PORT dataa (3214:3214:3214) (3497:3497:3497))
+        (PORT datad (3171:3171:3171) (3411:3411:3411))
+        (IOPATH dataa combout (429:429:429) (437:437:437))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
     )
@@ -172,14 +172,14 @@
   )
   (CELL
     (CELLTYPE "cycloneiii_lcell_comb")
-    (INSTANCE \\Selector6\~0\\)
+    (INSTANCE \\Selector2\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT dataa (296:296:296) (387:387:387))
-        (PORT datab (3431:3431:3431) (3672:3672:3672))
-        (PORT datad (272:272:272) (349:349:349))
-        (IOPATH dataa combout (429:429:429) (437:437:437))
-        (IOPATH datab combout (418:418:418) (404:404:404))
+        (PORT datab (1353:1353:1353) (1319:1319:1319))
+        (PORT datac (263:263:263) (345:345:345))
+        (PORT datad (3142:3142:3142) (3416:3416:3416))
+        (IOPATH datab combout (418:418:418) (425:425:425))
+        (IOPATH datac combout (285:285:285) (280:280:280))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
     )
@@ -189,8 +189,8 @@
     (INSTANCE \\EA\.S0\~feeder\\)
     (DELAY
       (ABSOLUTE
-        (PORT datad (373:373:373) (376:376:376))
-        (IOPATH datad combout (155:155:155) (139:139:139))
+        (PORT dataa (610:610:610) (606:606:606))
+        (IOPATH dataa combout (417:417:417) (424:424:424))
       )
     )
   )
@@ -215,10 +215,10 @@
     (INSTANCE \\PE\.S1\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (3431:3431:3431) (3674:3674:3674))
-        (PORT datad (271:271:271) (351:351:351))
-        (IOPATH datab combout (418:418:418) (425:425:425))
-        (IOPATH datad combout (155:155:155) (139:139:139))
+        (PORT dataa (3215:3215:3215) (3497:3497:3497))
+        (PORT datab (912:912:912) (917:917:917))
+        (IOPATH dataa combout (417:417:417) (404:404:404))
+        (IOPATH datab combout (441:441:441) (443:443:443))
       )
     )
   )
@@ -227,8 +227,8 @@
     (INSTANCE \\EA\.S1\~feeder\\)
     (DELAY
       (ABSOLUTE
-        (PORT datac (371:371:371) (382:382:382))
-        (IOPATH datac combout (287:287:287) (281:281:281))
+        (PORT datab (931:931:931) (877:877:877))
+        (IOPATH datab combout (418:418:418) (425:425:425))
       )
     )
   )
@@ -254,7 +254,7 @@
     (DELAY
       (ABSOLUTE
         (PORT clk (936:936:936) (987:987:987))
-        (PORT asdata (669:669:669) (750:750:750))
+        (PORT asdata (669:669:669) (748:748:748))
         (PORT clrn (1504:1504:1504) (1506:1506:1506))
         (IOPATH (posedge clk) q (232:232:232) (232:232:232))
         (IOPATH (negedge clrn) q (223:223:223) (223:223:223))
@@ -269,8 +269,8 @@
     (INSTANCE \\PE\.S2\\)
     (DELAY
       (ABSOLUTE
-        (PORT datac (290:290:290) (378:378:378))
-        (PORT datad (260:260:260) (336:336:336))
+        (PORT datac (292:292:292) (380:380:380))
+        (PORT datad (261:261:261) (336:336:336))
         (IOPATH datac combout (287:287:287) (280:280:280))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
@@ -281,8 +281,8 @@
     (INSTANCE \\EA\.S2\~feeder\\)
     (DELAY
       (ABSOLUTE
-        (PORT datac (214:214:214) (248:248:248))
-        (IOPATH datac combout (287:287:287) (281:281:281))
+        (PORT datad (214:214:214) (244:244:244))
+        (IOPATH datad combout (155:155:155) (139:139:139))
       )
     )
   )
@@ -307,9 +307,9 @@
     (INSTANCE \\PE\.S3\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (306:306:306) (397:397:397))
-        (PORT datad (3149:3149:3149) (3426:3426:3426))
-        (IOPATH datab combout (361:361:361) (361:361:361))
+        (PORT datac (453:453:453) (498:498:498))
+        (PORT datad (3039:3039:3039) (3268:3268:3268))
+        (IOPATH datac combout (285:285:285) (281:281:281))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
     )
@@ -335,10 +335,10 @@
     (INSTANCE \\WideOr0\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (300:300:300) (391:391:391))
-        (PORT datac (292:292:292) (381:381:381))
-        (PORT datad (263:263:263) (341:341:341))
-        (IOPATH datab combout (418:418:418) (425:425:425))
+        (PORT dataa (328:328:328) (423:423:423))
+        (PORT datac (259:259:259) (343:343:343))
+        (PORT datad (283:283:283) (359:359:359))
+        (IOPATH dataa combout (417:417:417) (424:424:424))
         (IOPATH datac combout (287:287:287) (280:280:280))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
@@ -349,10 +349,10 @@
     (INSTANCE \\read_mem\$latch\\)
     (DELAY
       (ABSOLUTE
-        (PORT dataa (594:594:594) (590:590:590))
+        (PORT datab (258:258:258) (294:294:294))
         (PORT datac (260:260:260) (344:344:344))
-        (PORT datad (369:369:369) (372:372:372))
-        (IOPATH dataa combout (358:358:358) (354:354:354))
+        (PORT datad (370:370:370) (372:372:372))
+        (IOPATH datab combout (361:361:361) (361:361:361))
         (IOPATH datac combout (287:287:287) (280:280:280))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
@@ -363,8 +363,8 @@
     (INSTANCE \\WideOr1\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datac (292:292:292) (379:379:379))
-        (PORT datad (268:268:268) (347:347:347))
+        (PORT datac (290:290:290) (380:380:380))
+        (PORT datad (274:274:274) (347:347:347))
         (IOPATH datac combout (285:285:285) (281:281:281))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
@@ -375,10 +375,10 @@
     (INSTANCE \\done\$latch\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (259:259:259) (293:293:293))
-        (PORT datac (203:203:203) (234:234:234))
-        (PORT datad (450:450:450) (487:487:487))
-        (IOPATH datab combout (418:418:418) (425:425:425))
+        (PORT dataa (426:426:426) (448:448:448))
+        (PORT datac (202:202:202) (233:233:233))
+        (PORT datad (444:444:444) (492:492:492))
+        (IOPATH dataa combout (417:417:417) (424:424:424))
         (IOPATH datac combout (287:287:287) (280:280:280))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
@@ -389,11 +389,11 @@
     (INSTANCE \\zi\$latch\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (257:257:257) (292:292:292))
-        (PORT datac (213:213:213) (249:249:249))
-        (PORT datad (262:262:262) (337:337:337))
-        (IOPATH datab combout (418:418:418) (425:425:425))
-        (IOPATH datac combout (287:287:287) (280:280:280))
+        (PORT dataa (245:245:245) (288:288:288))
+        (PORT datac (226:226:226) (257:257:257))
+        (PORT datad (262:262:262) (336:336:336))
+        (IOPATH dataa combout (417:417:417) (424:424:424))
+        (IOPATH datac combout (287:287:287) (281:281:281))
         (IOPATH datad combout (155:155:155) (139:139:139))
       )
     )
