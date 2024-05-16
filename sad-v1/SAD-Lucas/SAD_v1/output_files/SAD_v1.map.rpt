@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAD_v1
-Wed May 15 21:06:55 2024
+Wed May 15 22:21:56 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,12 +13,47 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |sad_bc|EA
+  8. State Machine - |Topo|sad_bc:V2|EA
   9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |sad_bc
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: sad_bo:V1
+ 13. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA
+ 14. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB
+ 15. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub
+ 16. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto
+ 17. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som1
+ 18. Parameter Settings for User Entity Instance: sad_bo:V1|mux2para1:mux1
+ 19. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:soma
+ 20. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:SAD_reg
+ 21. Parameter Settings for User Entity Instance: sad_bo:V1|mux2para1:mux2
+ 22. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:regi
+ 23. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som2
+ 24. Parameter Settings for User Entity Instance: sad_bc:V2
+ 25. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:5:sc_internal:sc"
+ 26. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:4:sc_internal:sc"
+ 27. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:3:sc_internal:sc"
+ 28. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:2:sc_internal:sc"
+ 29. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2"
+ 30. Port Connectivity Checks: "sad_bo:V1|registrador:regi"
+ 31. Port Connectivity Checks: "sad_bo:V1|mux2para1:mux2"
+ 32. Port Connectivity Checks: "sad_bo:V1|registrador:SAD_reg"
+ 33. Port Connectivity Checks: "sad_bo:V1|mux2para1:mux1"
+ 34. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:13:sc_internal:sc"
+ 35. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:12:sc_internal:sc"
+ 36. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:11:sc_internal:sc"
+ 37. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:10:sc_internal:sc"
+ 38. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:9:sc_internal:sc"
+ 39. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:8:sc_internal:sc"
+ 40. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:7:sc_internal:sc"
+ 41. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:6:sc_internal:sc"
+ 42. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:5:sc_internal:sc"
+ 43. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:4:sc_internal:sc"
+ 44. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:3:sc_internal:sc"
+ 45. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:2:sc_internal:sc"
+ 46. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1"
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +79,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 15 21:06:55 2024      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 15 22:21:56 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; SAD_v1                                     ;
-; Top-level Entity Name              ; sad_bc                                     ;
+; Top-level Entity Name              ; Topo                                       ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 12                                         ;
-;     Total combinational functions  ; 11                                         ;
-;     Dedicated logic registers      ; 6                                          ;
-; Total registers                    ; 6                                          ;
-; Total pins                         ; 13                                         ;
+; Total logic elements               ; 7                                          ;
+;     Total combinational functions  ; 5                                          ;
+;     Dedicated logic registers      ; 4                                          ;
+; Total registers                    ; 4                                          ;
+; Total pins                         ; 41                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -67,7 +102,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C5E144C7        ;                    ;
-; Top-level entity name                                                      ; sad_bc             ; SAD_v1             ;
+; Top-level entity name                                                      ; Topo               ; SAD_v1             ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -159,43 +194,51 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; sad_bc.vhd                       ; yes             ; User VHDL File  ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------------------+---------+
+; somador1bit.vhd                  ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somador1bit.vhd    ;         ;
+; abst.vhd                         ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/abst.vhd           ;         ;
+; sad_bc.vhd                       ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bc.vhd         ;         ;
+; mux2para1.vhd                    ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/mux2para1.vhd      ;         ;
+; sad_bo.vhd                       ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/sad_bo.vhd         ;         ;
+; somadornbits.vhd                 ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/somadornbits.vhd   ;         ;
+; subtratornbits.vhd               ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/subtratornbits.vhd ;         ;
+; Topo.vhd                         ; yes             ; User VHDL File        ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/Topo.vhd           ;         ;
+; registrador.vhd                  ; yes             ; Auto-Found VHDL File  ; C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406/sad-v1/SAD-Lucas/SAD_v1/registrador.vhd    ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 12    ;
-;                                             ;       ;
-; Total combinational functions               ; 11    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 5     ;
-;     -- <=2 input functions                  ; 6     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 11    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 6     ;
-;     -- Dedicated logic registers            ; 6     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 13    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; REG~0 ;
-; Maximum fan-out                             ; 6     ;
-; Total fan-out                               ; 62    ;
-; Average fan-out                             ; 1.44  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 7               ;
+;                                             ;                 ;
+; Total combinational functions               ; 5               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 2               ;
+;     -- <=2 input functions                  ; 3               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 5               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 4               ;
+;     -- Dedicated logic registers            ; 4               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 41              ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; sad_bc:V2|REG~0 ;
+; Maximum fan-out                             ; 4               ;
+; Total fan-out                               ; 66              ;
+; Average fan-out                             ; 0.73            ;
++---------------------------------------------+-----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,14 +246,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |sad_bc                    ; 11 (11)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |sad_bc             ; work         ;
+; |Topo                      ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |Topo               ; work         ;
+;    |sad_bc:V2|             ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Topo|sad_bc:V2     ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------+
-; State Machine - |sad_bc|EA                            ;
+; State Machine - |Topo|sad_bc:V2|EA                    ;
 +-------+-------+-------+-------+-------+-------+-------+
 ; Name  ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S0 ;
 +-------+-------+-------+-------+-------+-------+-------+
@@ -228,13 +272,21 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
-; read_mem$latch                                     ; WideOr0             ; yes                    ;
-; done$latch                                         ; WideOr1             ; yes                    ;
-; zi$latch                                           ; PE.S2               ; yes                    ;
-; zsoma$latch                                        ; PE.S2               ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
+; sad_bc:V2|done                                     ; sad_bc:V2|WideOr1   ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; sad_bc:V2|EA.S3                       ; Lost fanout                            ;
+; sad_bc:V2|EA.S4                       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -242,26 +294,349 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 6     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |sad_bc ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; B              ; 8     ; Signed Integer                                ;
-; N              ; 64    ; Signed Integer                                ;
-; P              ; 1     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; X              ; 14    ; Signed Integer                ;
+; N              ; 8     ; Signed Integer                ;
++----------------+-------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; n              ; 8     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 8     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 14    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|mux2para1:mux1 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 14    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:soma ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 14    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:SAD_reg ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 14    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|mux2para1:mux2 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 7     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:regi ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 7     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 6     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bc:V2 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; B              ; 8     ; Signed Integer                ;
+; N              ; 64    ; Signed Integer                ;
+; P              ; 1     ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:5:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:4:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:3:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2|somador1bit:\scs:2:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2" ;
++---------+-------+----------+----------------------------+
+; Port    ; Type  ; Severity ; Details                    ;
++---------+-------+----------+----------------------------+
+; cin     ; Input ; Info     ; Stuck at GND               ;
+; b[5..1] ; Input ; Info     ; Stuck at GND               ;
+; b[0]    ; Input ; Info     ; Stuck at VCC               ;
++---------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|registrador:regi"                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|mux2para1:mux2" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; b    ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|registrador:SAD_reg"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|mux2para1:mux1" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; b    ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:13:sc_internal:sc" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                     ;
++------+-------+----------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:12:sc_internal:sc" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                     ;
++------+-------+----------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:11:sc_internal:sc" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                     ;
++------+-------+----------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:10:sc_internal:sc" ;
++------+-------+----------+------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                          ;
++------+-------+----------+------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                     ;
++------+-------+----------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:9:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:8:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:7:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:6:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:5:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:4:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:3:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1|somador1bit:\scs:2:sc_internal:sc" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som1"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[13..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; s[14]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -279,7 +654,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 15 21:06:53 2024
+    Info: Processing started: Wed May 15 22:21:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAD_v1 -c SAD_v1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file somador1bit.vhd
@@ -295,8 +670,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux2par
     Info (12022): Found design unit 1: mux2para1-comportamento
     Info (12023): Found entity 1: mux2para1
 Info (12021): Found 2 design units, including 1 entities, in source file sad_bo.vhd
-    Info (12022): Found design unit 1: Datapath-arc
-    Info (12023): Found entity 1: Datapath
+    Info (12022): Found design unit 1: sad_bo-arc
+    Info (12023): Found entity 1: sad_bo
 Info (12021): Found 2 design units, including 1 entities, in source file somadornbits.vhd
     Info (12022): Found design unit 1: somadornbits-comportamento
     Info (12023): Found entity 1: somadornbits
@@ -306,7 +681,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file subtrat
 Info (12021): Found 2 design units, including 1 entities, in source file topo.vhd
     Info (12022): Found design unit 1: Topo-arc
     Info (12023): Found entity 1: Topo
-Info (12127): Elaborating entity "sad_bc" for the top level hierarchy
+Info (12127): Elaborating entity "Topo" for the top level hierarchy
+Info (12128): Elaborating entity "sad_bo" for hierarchy "sad_bo:V1"
+Warning (10541): VHDL Signal Declaration warning at sad_bo.vhd(13): used implicit default value for signal "menor" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at sad_bo.vhd(14): used implicit default value for signal "endi" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at sad_bo.vhd(15): used implicit default value for signal "SAD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at sad_bo.vhd(24): object "sig9" assigned a value but never read
+Warning (12125): Using design file registrador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: registrador-comportamento
+    Info (12023): Found entity 1: registrador
+Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:pA"
+Info (12128): Elaborating entity "subtratornbits" for hierarchy "sad_bo:V1|subtratornbits:sub"
+Info (12128): Elaborating entity "abst" for hierarchy "sad_bo:V1|abst:absto"
+Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:som1"
+Warning (10873): Using initial value X (don't care) for net "c[13..2]" at somadornbits.vhd(14)
+Info (12128): Elaborating entity "somador1bit" for hierarchy "sad_bo:V1|somadornbits:som1|somador1bit:\scs:0:sc_internal:sc"
+Info (12128): Elaborating entity "mux2para1" for hierarchy "sad_bo:V1|mux2para1:mux1"
+Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:soma"
+Info (12128): Elaborating entity "mux2para1" for hierarchy "sad_bo:V1|mux2para1:mux2"
+Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:regi"
+Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:som2"
+Warning (10873): Using initial value X (don't care) for net "c[5..2]" at somadornbits.vhd(14)
+Info (12128): Elaborating entity "sad_bc" for hierarchy "sad_bc:V2"
 Warning (10492): VHDL Process Statement warning at sad_bc.vhd(56): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at sad_bc.vhd(63): inferring latch(es) for signal or variable "read_mem", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at sad_bc.vhd(63): inferring latch(es) for signal or variable "done", which holds its previous value in one or more paths through the process
@@ -326,28 +722,58 @@ Info (10041): Inferred latch for "ci" at sad_bc.vhd(63)
 Info (10041): Inferred latch for "zi" at sad_bc.vhd(63)
 Info (10041): Inferred latch for "done" at sad_bc.vhd(63)
 Info (10041): Inferred latch for "read_mem" at sad_bc.vhd(63)
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "zsoma$latch" merged with LATCH primitive "zi$latch"
-Warning (13012): Latch done$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EA.S1
-Warning (13012): Latch zi$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal EA.S4
+Warning (13012): Latch sad_bc:V2|done has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sad_bc:V2|EA.S1
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "cpA" is stuck at VCC
-    Warning (13410): Pin "cpB" is stuck at VCC
-    Warning (13410): Pin "ci" is stuck at VCC
-    Warning (13410): Pin "csoma" is stuck at VCC
-    Warning (13410): Pin "csad_reg" is stuck at VCC
+    Warning (13410): Pin "SAD_saida[0]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[1]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[2]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[3]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[4]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[5]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[6]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[7]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[8]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[9]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[10]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[11]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[12]" is stuck at GND
+    Warning (13410): Pin "SAD_saida[13]" is stuck at GND
+    Warning (13410): Pin "end_sad[0]" is stuck at GND
+    Warning (13410): Pin "end_sad[1]" is stuck at GND
+    Warning (13410): Pin "end_sad[2]" is stuck at GND
+    Warning (13410): Pin "end_sad[3]" is stuck at GND
+    Warning (13410): Pin "end_sad[4]" is stuck at GND
+    Warning (13410): Pin "end_sad[5]" is stuck at GND
+    Warning (13410): Pin "read_sad" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4661 megabytes
-    Info: Processing ended: Wed May 15 21:06:55 2024
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sample_ori[0]"
+    Warning (15610): No output dependent on input pin "sample_ori[1]"
+    Warning (15610): No output dependent on input pin "sample_ori[2]"
+    Warning (15610): No output dependent on input pin "sample_ori[3]"
+    Warning (15610): No output dependent on input pin "sample_ori[4]"
+    Warning (15610): No output dependent on input pin "sample_ori[5]"
+    Warning (15610): No output dependent on input pin "sample_ori[6]"
+    Warning (15610): No output dependent on input pin "sample_ori[7]"
+    Warning (15610): No output dependent on input pin "sample_can[0]"
+    Warning (15610): No output dependent on input pin "sample_can[1]"
+    Warning (15610): No output dependent on input pin "sample_can[2]"
+    Warning (15610): No output dependent on input pin "sample_can[3]"
+    Warning (15610): No output dependent on input pin "sample_can[4]"
+    Warning (15610): No output dependent on input pin "sample_can[5]"
+    Warning (15610): No output dependent on input pin "sample_can[6]"
+    Warning (15610): No output dependent on input pin "sample_can[7]"
+Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 7 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4657 megabytes
+    Info: Processing ended: Wed May 15 22:21:56 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
