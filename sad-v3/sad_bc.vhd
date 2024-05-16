@@ -9,13 +9,13 @@ ENTITY sad_bc IS
 	GENERIC (
 		-- obrigatório ---
 		-- defina as operações considerando o número B de bits por amostra
-		B : INTEGER := 8; -- número de bits por amostra
+		B : INTEGER := 32; -- número de bits por amostra
 		-----------------------------------------------------------------------
 		-- desejado (i.e., não obrigatório) ---
 		-- se você desejar, pode usar os valores abaixo para descrever uma
 		-- entidade que funcione tanto para a SAD v1 quanto para a SAD v3.
-		N : INTEGER := 64; -- número de amostras por bloco
-		P : INTEGER := 1 -- número de amostras de cada bloco lidas em paralelo
+		N : INTEGER := 16; -- número de amostras por bloco
+		P : INTEGER := 4 -- número de amostras de cada bloco lidas em paralelo
 		-----------------------------------------------------------------------
 	);
 	PORT (

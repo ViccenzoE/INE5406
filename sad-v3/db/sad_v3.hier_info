@@ -1,0 +1,773 @@
+|topo
+CLOCK => sad_bo:V1.CLK
+CLOCK => sad_bc:V2.clk
+iniciar => sad_bc:V2.enable
+reset => sad_bc:V2.reset
+sample_ori[0] => sad_bo:V1.sample_ori[0]
+sample_ori[1] => sad_bo:V1.sample_ori[1]
+sample_ori[2] => sad_bo:V1.sample_ori[2]
+sample_ori[3] => sad_bo:V1.sample_ori[3]
+sample_ori[4] => sad_bo:V1.sample_ori[4]
+sample_ori[5] => sad_bo:V1.sample_ori[5]
+sample_ori[6] => sad_bo:V1.sample_ori[6]
+sample_ori[7] => sad_bo:V1.sample_ori[7]
+sample_can[0] => sad_bo:V1.sample_can[0]
+sample_can[1] => sad_bo:V1.sample_can[1]
+sample_can[2] => sad_bo:V1.sample_can[2]
+sample_can[3] => sad_bo:V1.sample_can[3]
+sample_can[4] => sad_bo:V1.sample_can[4]
+sample_can[5] => sad_bo:V1.sample_can[5]
+sample_can[6] => sad_bo:V1.sample_can[6]
+sample_can[7] => sad_bo:V1.sample_can[7]
+SAD_saida[0] <= sad_bo:V1.SAD[0]
+SAD_saida[1] <= sad_bo:V1.SAD[1]
+SAD_saida[2] <= sad_bo:V1.SAD[2]
+SAD_saida[3] <= sad_bo:V1.SAD[3]
+SAD_saida[4] <= sad_bo:V1.SAD[4]
+SAD_saida[5] <= sad_bo:V1.SAD[5]
+SAD_saida[6] <= sad_bo:V1.SAD[6]
+SAD_saida[7] <= sad_bo:V1.SAD[7]
+SAD_saida[8] <= sad_bo:V1.SAD[8]
+SAD_saida[9] <= sad_bo:V1.SAD[9]
+SAD_saida[10] <= sad_bo:V1.SAD[10]
+SAD_saida[11] <= sad_bo:V1.SAD[11]
+SAD_saida[12] <= sad_bo:V1.SAD[12]
+SAD_saida[13] <= sad_bo:V1.SAD[13]
+end_sad[0] <= sad_bo:V1.endi[0]
+end_sad[1] <= sad_bo:V1.endi[1]
+end_sad[2] <= sad_bo:V1.endi[2]
+end_sad[3] <= sad_bo:V1.endi[3]
+end_sad[4] <= sad_bo:V1.endi[4]
+end_sad[5] <= sad_bo:V1.endi[5]
+read_sad <= sad_bc:V2.read_mem
+pronto <= sad_bc:V2.done
+
+
+|topo|sad_bo:V1
+CLK => ~NO_FANOUT~
+zi => mux2para1:mux2.sel
+ci => registrador:regi.clk
+cpA => registrador:pA.clk
+cpB => registrador:pB.clk
+zsoma => mux2para1:mux1.sel
+csoma => registrador:soma.clk
+csad_reg => registrador:SAD_reg.clk
+sample_ori[0] => registrador:pA.D[0]
+sample_ori[1] => registrador:pA.D[1]
+sample_ori[2] => registrador:pA.D[2]
+sample_ori[3] => registrador:pA.D[3]
+sample_ori[4] => registrador:pA.D[4]
+sample_ori[5] => registrador:pA.D[5]
+sample_ori[6] => registrador:pA.D[6]
+sample_ori[7] => registrador:pA.D[7]
+sample_can[0] => registrador:pB.D[0]
+sample_can[1] => registrador:pB.D[1]
+sample_can[2] => registrador:pB.D[2]
+sample_can[3] => registrador:pB.D[3]
+sample_can[4] => registrador:pB.D[4]
+sample_can[5] => registrador:pB.D[5]
+sample_can[6] => registrador:pB.D[6]
+sample_can[7] => registrador:pB.D[7]
+menor <= menor.DB_MAX_OUTPUT_PORT_TYPE
+endi[0] <= endi[0].DB_MAX_OUTPUT_PORT_TYPE
+endi[1] <= endi[1].DB_MAX_OUTPUT_PORT_TYPE
+endi[2] <= endi[2].DB_MAX_OUTPUT_PORT_TYPE
+endi[3] <= endi[3].DB_MAX_OUTPUT_PORT_TYPE
+endi[4] <= endi[4].DB_MAX_OUTPUT_PORT_TYPE
+endi[5] <= endi[5].DB_MAX_OUTPUT_PORT_TYPE
+SAD[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+SAD[1] <= SAD[1].DB_MAX_OUTPUT_PORT_TYPE
+SAD[2] <= SAD[2].DB_MAX_OUTPUT_PORT_TYPE
+SAD[3] <= SAD[3].DB_MAX_OUTPUT_PORT_TYPE
+SAD[4] <= SAD[4].DB_MAX_OUTPUT_PORT_TYPE
+SAD[5] <= SAD[5].DB_MAX_OUTPUT_PORT_TYPE
+SAD[6] <= SAD[6].DB_MAX_OUTPUT_PORT_TYPE
+SAD[7] <= SAD[7].DB_MAX_OUTPUT_PORT_TYPE
+SAD[8] <= SAD[8].DB_MAX_OUTPUT_PORT_TYPE
+SAD[9] <= SAD[9].DB_MAX_OUTPUT_PORT_TYPE
+SAD[10] <= SAD[10].DB_MAX_OUTPUT_PORT_TYPE
+SAD[11] <= SAD[11].DB_MAX_OUTPUT_PORT_TYPE
+SAD[12] <= SAD[12].DB_MAX_OUTPUT_PORT_TYPE
+SAD[13] <= SAD[13].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|registrador:pA
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|registrador:pB
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|subtratornbits:sub
+sub1[0] => Add0.IN16
+sub1[1] => Add0.IN15
+sub1[2] => Add0.IN14
+sub1[3] => Add0.IN13
+sub1[4] => Add0.IN12
+sub1[5] => Add0.IN11
+sub1[6] => Add0.IN10
+sub1[7] => Add0.IN9
+sub2[0] => Add0.IN8
+sub2[1] => Add0.IN7
+sub2[2] => Add0.IN6
+sub2[3] => Add0.IN5
+sub2[4] => Add0.IN4
+sub2[5] => Add0.IN3
+sub2[6] => Add0.IN2
+sub2[7] => Add0.IN1
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|abst:absto
+a[0] => s.IN0
+a[1] => s.IN0
+a[2] => s.IN0
+a[3] => s.IN0
+a[4] => s.IN0
+a[5] => s.IN0
+a[6] => s.IN0
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => Add0.IN15
+s[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1
+cin => Somador1bit:scs:0:sc_internal:sc.cin
+a[0] => Somador1bit:scs:0:sc_internal:sc.a
+a[1] => Somador1bit:scs:1:sc_internal:sc.a
+a[2] => Somador1bit:scs:2:sc_internal:sc.a
+a[3] => Somador1bit:scs:3:sc_internal:sc.a
+a[4] => Somador1bit:scs:4:sc_internal:sc.a
+a[5] => Somador1bit:scs:5:sc_internal:sc.a
+a[6] => Somador1bit:scs:6:sc_internal:sc.a
+a[7] => Somador1bit:scs:7:sc_internal:sc.a
+a[8] => Somador1bit:scs:8:sc_internal:sc.a
+a[9] => Somador1bit:scs:9:sc_internal:sc.a
+a[10] => Somador1bit:scs:10:sc_internal:sc.a
+a[11] => Somador1bit:scs:11:sc_internal:sc.a
+a[12] => Somador1bit:scs:12:sc_internal:sc.a
+a[13] => Somador1bit:scs:13:sc_internal:sc.a
+b[0] => Somador1bit:scs:0:sc_internal:sc.b
+b[1] => Somador1bit:scs:1:sc_internal:sc.b
+b[2] => Somador1bit:scs:2:sc_internal:sc.b
+b[3] => Somador1bit:scs:3:sc_internal:sc.b
+b[4] => Somador1bit:scs:4:sc_internal:sc.b
+b[5] => Somador1bit:scs:5:sc_internal:sc.b
+b[6] => Somador1bit:scs:6:sc_internal:sc.b
+b[7] => Somador1bit:scs:7:sc_internal:sc.b
+b[8] => Somador1bit:scs:8:sc_internal:sc.b
+b[9] => Somador1bit:scs:9:sc_internal:sc.b
+b[10] => Somador1bit:scs:10:sc_internal:sc.b
+b[11] => Somador1bit:scs:11:sc_internal:sc.b
+b[12] => Somador1bit:scs:12:sc_internal:sc.b
+b[13] => Somador1bit:scs:13:sc_internal:sc.b
+s[0] <= Somador1bit:scs:0:sc_internal:sc.s
+s[1] <= Somador1bit:scs:1:sc_internal:sc.s
+s[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3].DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s[4].DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s[5].DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= s[6].DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= s[7].DB_MAX_OUTPUT_PORT_TYPE
+s[8] <= s[8].DB_MAX_OUTPUT_PORT_TYPE
+s[9] <= s[9].DB_MAX_OUTPUT_PORT_TYPE
+s[10] <= s[10].DB_MAX_OUTPUT_PORT_TYPE
+s[11] <= s[11].DB_MAX_OUTPUT_PORT_TYPE
+s[12] <= s[12].DB_MAX_OUTPUT_PORT_TYPE
+s[13] <= s[13].DB_MAX_OUTPUT_PORT_TYPE
+s[14] <= Somador1bit:scs:13:sc_internal:sc.cout
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:0:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:1:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:2:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:3:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:4:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:5:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:6:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:7:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:8:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:9:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:10:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:11:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:12:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som1|somador1bit:\scs:13:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|mux2para1:mux1
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+a[0] => y.DATAB
+a[1] => y.DATAB
+a[2] => y.DATAB
+a[3] => y.DATAB
+a[4] => y.DATAB
+a[5] => y.DATAB
+a[6] => y.DATAB
+a[7] => y.DATAB
+a[8] => y.DATAB
+a[9] => y.DATAB
+a[10] => y.DATAB
+a[11] => y.DATAB
+a[12] => y.DATAB
+a[13] => y.DATAB
+b[0] => y.DATAA
+b[1] => y.DATAA
+b[2] => y.DATAA
+b[3] => y.DATAA
+b[4] => y.DATAA
+b[5] => y.DATAA
+b[6] => y.DATAA
+b[7] => y.DATAA
+b[8] => y.DATAA
+b[9] => y.DATAA
+b[10] => y.DATAA
+b[11] => y.DATAA
+b[12] => y.DATAA
+b[13] => y.DATAA
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[10] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[11] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[12] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[13] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|registrador:soma
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+D[8] => Q[8]~reg0.DATAIN
+D[9] => Q[9]~reg0.DATAIN
+D[10] => Q[10]~reg0.DATAIN
+D[11] => Q[11]~reg0.DATAIN
+D[12] => Q[12]~reg0.DATAIN
+D[13] => Q[13]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|registrador:SAD_reg
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => Q[8]~reg0.CLK
+clk => Q[9]~reg0.CLK
+clk => Q[10]~reg0.CLK
+clk => Q[11]~reg0.CLK
+clk => Q[12]~reg0.CLK
+clk => Q[13]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+D[8] => Q[8]~reg0.DATAIN
+D[9] => Q[9]~reg0.DATAIN
+D[10] => Q[10]~reg0.DATAIN
+D[11] => Q[11]~reg0.DATAIN
+D[12] => Q[12]~reg0.DATAIN
+D[13] => Q[13]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|mux2para1:mux2
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+sel => y.OUTPUTSELECT
+a[0] => y.DATAB
+a[1] => y.DATAB
+a[2] => y.DATAB
+a[3] => y.DATAB
+a[4] => y.DATAB
+a[5] => y.DATAB
+a[6] => y.DATAB
+b[0] => y.DATAA
+b[1] => y.DATAA
+b[2] => y.DATAA
+b[3] => y.DATAA
+b[4] => y.DATAA
+b[5] => y.DATAA
+b[6] => y.DATAA
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|registrador:regi
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som2
+cin => Somador1bit:scs:0:sc_internal:sc.cin
+a[0] => Somador1bit:scs:0:sc_internal:sc.a
+a[1] => Somador1bit:scs:1:sc_internal:sc.a
+a[2] => Somador1bit:scs:2:sc_internal:sc.a
+a[3] => Somador1bit:scs:3:sc_internal:sc.a
+a[4] => Somador1bit:scs:4:sc_internal:sc.a
+a[5] => Somador1bit:scs:5:sc_internal:sc.a
+b[0] => Somador1bit:scs:0:sc_internal:sc.b
+b[1] => Somador1bit:scs:1:sc_internal:sc.b
+b[2] => Somador1bit:scs:2:sc_internal:sc.b
+b[3] => Somador1bit:scs:3:sc_internal:sc.b
+b[4] => Somador1bit:scs:4:sc_internal:sc.b
+b[5] => Somador1bit:scs:5:sc_internal:sc.b
+s[0] <= Somador1bit:scs:0:sc_internal:sc.s
+s[1] <= Somador1bit:scs:1:sc_internal:sc.s
+s[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3].DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s[4].DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s[5].DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Somador1bit:scs:5:sc_internal:sc.cout
+
+
+|topo|sad_bo:V1|somadornbits:som2|somador1bit:\scs:0:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som2|somador1bit:\scs:1:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som2|somador1bit:\scs:2:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som2|somador1bit:\scs:3:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som2|somador1bit:\scs:4:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bo:V1|somadornbits:som2|somador1bit:\scs:5:sc_internal:sc
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+a => s.IN0
+a => cout.IN0
+a => cout.IN1
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topo|sad_bc:V2
+clk => EA~1.DATAIN
+enable => PE.S1.DATAB
+enable => Selector2.IN2
+enable => REG.IN0
+reset => REG.IN1
+menor => PE.S3.DATAB
+menor => PE.S5.DATAB
+read_mem <= read_mem$latch.DB_MAX_OUTPUT_PORT_TYPE
+done <= done$latch.DB_MAX_OUTPUT_PORT_TYPE
+cpA <= <VCC>
+cpB <= <VCC>
+ci <= <VCC>
+zi <= zi$latch.DB_MAX_OUTPUT_PORT_TYPE
+zsoma <= zsoma$latch.DB_MAX_OUTPUT_PORT_TYPE
+csoma <= <VCC>
+csad_reg <= <VCC>
+
+
