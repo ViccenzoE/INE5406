@@ -755,19 +755,18 @@ cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 |Topo|sad_bc:V2
 clk => EA~1.DATAIN
 enable => PE.S1.DATAB
-enable => Selector2.IN2
-enable => REG.IN0
-reset => REG.IN1
+enable => Selector0.IN2
+reset => EA~3.DATAIN
 menor => PE.S3.DATAB
 menor => PE.S5.DATAB
-read_mem <= read_mem$latch.DB_MAX_OUTPUT_PORT_TYPE
-done <= done$latch.DB_MAX_OUTPUT_PORT_TYPE
-cpA <= <VCC>
-cpB <= <VCC>
-ci <= <VCC>
-zi <= zi$latch.DB_MAX_OUTPUT_PORT_TYPE
-zsoma <= zsoma$latch.DB_MAX_OUTPUT_PORT_TYPE
-csoma <= <VCC>
-csad_reg <= <VCC>
+read_mem <= read_mem.DB_MAX_OUTPUT_PORT_TYPE
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+cpA <= cpA.DB_MAX_OUTPUT_PORT_TYPE
+cpB <= cpB.DB_MAX_OUTPUT_PORT_TYPE
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+zi <= zi.DB_MAX_OUTPUT_PORT_TYPE
+zsoma <= zsoma.DB_MAX_OUTPUT_PORT_TYPE
+csoma <= csoma.DB_MAX_OUTPUT_PORT_TYPE
+csad_reg <= csad_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
