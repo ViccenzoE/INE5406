@@ -10,7 +10,7 @@ PORT (
 END mux2para1;
 ARCHITECTURE comportamento OF mux2para1 IS
  BEGIN
- WITH sel SELECT
-		y <= a WHEN sel = '0' ELSE
-			  b;
+ WITH sel SELECT y <= 
+	a WHEN '0',
+	b WHEN '1';
  END comportamento;

@@ -9,13 +9,13 @@ ENTITY sad_bc IS
 	GENERIC (
 		-- obrigatório ---
 		-- defina as operações considerando o número B de bits por amostra
-		B : INTEGER := 8; -- número de bits por amostra
+		B : INTEGER := 32; -- número de bits por amostra
 		-----------------------------------------------------------------------
 		-- desejado (i.e., não obrigatório) ---
 		-- se você desejar, pode usar os valores abaixo para descrever uma
 		-- entidade que funcione tanto para a SAD v1 quanto para a SAD v3.
-		N : INTEGER := 64; -- número de amostras por bloco
-		P : INTEGER := 1 -- número de amostras de cada bloco lidas em paralelo
+		N : INTEGER := 16; -- número de amostras por bloco
+		P : INTEGER := 4 -- número de amostras de cada bloco lidas em paralelo
 		-----------------------------------------------------------------------
 	);
 	PORT (
@@ -53,31 +53,31 @@ SIGNAL EA, PE: STATES;
 BEGIN
 	REG: process(CLK,reset)
 	begin
-		if reset='1' then
+		if reset='1' or enable='0' then
 			EA <= S0;
 		elsif (CLK'event AND CLK = '1') then
 			EA <= PE;
 		end if;
 	end process;
 
-	COMB: process(EA, enable)
+	COMB: process(EA, enable, menor)
 	begin
 		case EA is
 			  
 		  when S0 => 
-				--read_mem <= '0';
-				--done <= '1';
+				read_mem <= '0';
+				done <= '1';
 				if enable='1' then
 					PE <= S1;
 				else
 					PE <= S0;
 				end if;
 		  when S1 =>
-				--done <= '0';
-				--zi <= '1'; 
-				--ci <= '1';
-				--zsoma <= '1';
-				--csoma <= '1';
+				done <= '0';
+				zi <= '1'; 
+				ci <= '1';
+				zsoma <= '1';
+				csoma <= '1';
 				PE <= S2;
 		  when S2 => 
 				if menor = '1' then
@@ -86,29 +86,20 @@ BEGIN
 					PE <= S5;
 				end if;
 		  when S3 =>
-				--read_mem <= '1';
-				--cpA <= '1';
-				--cpB <= '1';
+				read_mem <= '1';
+				cpA <= '1';
+				cpB <= '1';
 				PE <= S4;
 		  when S4 =>
-				--read_mem <= '0';
-				--zi <= '0';
-				--ci <= '1';
-				--zsoma <= '0';
-				--csoma <= '1';
+				read_mem <= '0';
+				zi <= '0';
+				ci <= '1';
+				zsoma <= '0';
+				csoma <= '1';
 				PE <= S2;
 		  when S5 =>
-				--csad_reg <= '1';
+				csad_reg <= '1';
 				PE <= S0;
 		end case;
 	end process;
-	read_mem <= '1' when EA = S3 else '0';
-	done <= '1' when EA = S0 else '0';
-	zi <= '1' when EA = S1 else '0';
-	ci <= '1' when EA = S1 or EA = S4 else '0';
-	zsoma <= '1' when EA = S1 else '0';
-	csoma <= '1' when EA = S1 or EA = S4 else '0';
-	csad_reg <= '1' when EA = S5 else '0';
-	cpA <= '1' when EA = S3 else '0';
-	cpB <= '1' when EA = S3 else '0';
 END ARCHITECTURE; -- arch

@@ -1,30 +1,19 @@
-USE ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
 ENTITY somadornbits IS
-	generic(N: POSITIVE := 8);
-    PORT (cin : IN STD_LOGIC;
-                 a, b : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
-                 s : OUT STD_LOGIC_VECTOR (N DOWNTO 0)
-                 );
+GENERIC (N : INTEGER := 8);
+PORT (
+	cin: IN std_logic;
+	add1 : IN STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
+	add2 : IN STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
+	sum : OUT STD_LOGIC_VECTOR(N DOWNTO 0));
 END somadornbits;
 
-ARCHITECTURE comportamento OF somador_nbits IS
-    SIGNAL c : STD_LOGIC;
-    COMPONENT Somador1bit
-          PORT (cin, a, b : IN  STD_LOGIC;
-                s, cout : OUT  STD_LOGIC);
-    END COMPONENT;
-	 
+ARCHITECTURE rtl OF somadornbits IS
+    signal temp_sum: unsigned(N downto 0);
 BEGIN
-	scs: for i in 0 to N - 1 generate
-		sc_internal: if i = 0 generate
-		sc : somador1bit PORT MAP(cin, a(i), b(i), s(i), c(i + 1));
-		elsif i = N - 1 generate
-		sc : somador1bit PORT MAP(c(i), a(i), b(i), s(i), s(i+1));
-		else generate
-		sc : somador1bit PORT MAP(c(i), a(i), b(i), s(i), c(i + 1));
-		end generate sc_internal;
-	end generate scs;
-
-
-END comportamento;
+	temp_sum <= resize(unsigned(add1), N + 1) + resize(unsigned(add2), N + 1);
+	sum <= std_logic_vector(temp_sum);
+END rtl;
