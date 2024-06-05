@@ -18,8 +18,6 @@ PORT(
 END ENTITY;
 
 ARCHITECTURE arc OF sad_bo IS
-	SIGNAL sig3: SIGNED(8 downto 0);
-	SIGNAL
 	SIGNAL sig3, sig31, sig32, sig33: SIGNED(7 downto 0);
 	SIGNAL sig1, sig11, sig12, sig13, sig14, sig15, sig16, sig17, sig4, sig41, sig42, sig43 : STD_LOGIC_VECTOR(7 downto 0);  -- Sinais de 8 bits, lado direito do bloco operacional
 	SIGNAL sig51, sig52 : STD_LOGIC_VECTOR(8 downto 0);
