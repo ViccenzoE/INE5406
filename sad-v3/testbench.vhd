@@ -1,27 +1,32 @@
-LIBRARY IEEE;
-USE IEEE.Std_Logic_1164.all;
-USE IEEE.std_logic_arith.all;
-USE IEEE.std_logic_unsigned.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+use ieee.math_real.all;
+use ieee.numeric_std.all;
+use IEEE.std_logic_te
 
-ENTITY Topo IS
-PORT(
-	-- Entradas
-	CLOCK: IN std_logic;
-	iniciar: IN std_logic;
-	reset: IN std_logic;
-	sample_ori: IN std_LOGIC_VECTOR(31 DOWNTO 0);
-	sample_can:IN std_LOGIC_VECTOR(31 DOWNTO 0);
-	
+ENTITY testbench IS
+END testbench;
+
+ARCHITECTURE tb OF testbench IS
+
+	-- Sinais de teste
+	signal CLOCK: IN std_logic := '0';
+	signal iniciar: IN std_logic := '1';
+	signal reset: IN std_logic := '0';
+	signal sample_ori: std_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
+	signal sample_can: std_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
+
 	-- Saí­das
 	SAD_saida: OUT std_logic_vector(7 DOWNTO 0);
 	end_sad: OUT std_logic_vector(3 DOWNTO 0);
 	read_sad: OUT std_logic;
 	pronto: OUT std_logic
-	
-);
-END ENTITY;
 
-ARCHITECTURE arc OF Topo IS
+	-- Constante do clock
+	CONSTANT passo : TIME := 20 ns;
+		
+
+begin
 
 COMPONENT sad_bo IS
 PORT(
