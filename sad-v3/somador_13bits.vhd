@@ -1,7 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY somadornbits IS
+ENTITY somadornb  IS
 	generic(N: POSITIVE := 8);
     PORT (cin : IN STD_LOGIC;
                            a, b : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);

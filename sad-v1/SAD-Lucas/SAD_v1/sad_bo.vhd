@@ -90,14 +90,15 @@ zero7 <= "0000000";
 --sig23 <= sig22(5 downto 0);
 --um6 <= "000001";
 --sig25 <= sig24;
---menor <= not(sig22(6));
+menor <= not(sig22(6));
+endi <= sig22(5 downto 0);
 -------------------------------------PORTMAPS------------------------------------------------------
 
 
 pA : registrador generic map(N => 8) PORT MAP(cpA, sample_ori, sig1);
 pB : registrador generic map(N => 8)PORT MAP(cpB, sample_can, sig2);
-sub : subtratornbits generic map(N => 8)PORT MAP(sig1, sig2, sig3);
-absto : abst generic map(N => 8)PORT MAP(sig3, sig4);
+sub : subtratornbits generic map(N => 9)PORT MAP('0'&sig1, '0'&sig2, sig3);
+absto : abst generic map(N => 9)PORT MAP(sig3, sig4);
 som1 : somadornbits generic map(N => 14)PORT MAP('0', sig8, sig5, sig6);
 mux1 : mux2para1 generic map(N => 14) PORT MAP(zsoma, sig6(13 downto 0), zero14, sig7);
 soma : registrador generic map(N => 14) PORT MAP(csoma, sig7, sig8);
