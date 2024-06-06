@@ -7,6 +7,9 @@ use std.textio.all;
 entity topo_tb is
 end topo_tb;
 
+
+-- Ver se precisa do teste1 no final 
+
 architecture tb of topo_tb is
 
     signal CLOCK: std_logic := '0';

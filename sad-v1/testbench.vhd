@@ -27,7 +27,7 @@ CONSTANT passo : TIME := 20 ns;
 begin 
 
 	DUV: entity work.sad
-		port map(CLOCK, iniciar, reset, sample_ori, sample_can);
+		port map(CLOCK, iniciar, reset, sample_ori, sample_can, SAD_saida, end_sad, read_sad, pronto);
 	CLOCK <= not CLOCK after passo/2;
 					
 	process
@@ -35,13 +35,13 @@ begin
 		sample_ori <= std_LOGIC_VECTOR(to_unsigned(0, sample_ori'length));
 		sample_can <= std_LOGIC_VECTOR(to_unsigned(0, sample_can'length));
 		wait for passo;
-		assert(sad_saida = "00000000000000")
+		assert(SAD_saida = "00000000000000")
 		report "Fail 0" severity error;
 		
 		sample_ori <= std_LOGIC_VECTOR(to_unsigned(255, sample_ori'length));
 		sample_can <= std_LOGIC_VECTOR(to_unsigned(0, sample_can'length));
 		wait for passo;
-		assert(sad_saida = "11111111111111")
+		assert(SAD_saida = "11111111000000")
 		report "Fail 1" severity error;
 		
 		

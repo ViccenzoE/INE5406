@@ -18,7 +18,7 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/altera/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File topo_run_msim_gate_vhdl.do already exists - backing up current file as topo_run_msim_gate_vhdl.do.bak7
+Warning: File topo_run_msim_gate_vhdl.do already exists - backing up current file as topo_run_msim_gate_vhdl.do.bak11
 Probing transcript
 ModelSim-Altera Info: # Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
 ModelSim-Altera Info: # do topo_run_msim_gate_vhdl.do 
@@ -46,42 +46,36 @@ ModelSim-Altera Info: # -- Loading package cycloneiii_components
 ModelSim-Altera Info: # -- Compiling entity sad
 ModelSim-Altera Info: # -- Compiling architecture structure of sad
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: # vcom -93 -work work {C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE54061/INE5406/sad-v1/testbench.vhd}
-ModelSim-Altera Info: # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-ModelSim-Altera Info: # -- Loading package STANDARD
-ModelSim-Altera Info: # -- Loading package TEXTIO
-ModelSim-Altera Info: # -- Loading package std_logic_1164
-ModelSim-Altera Info: # -- Loading package MATH_REAL
-ModelSim-Altera Info: # -- Loading package NUMERIC_STD
-ModelSim-Altera Info: # -- Loading package std_logic_textio
-ModelSim-Altera Info: # -- Compiling entity testbench
-ModelSim-Altera Info: # -- Compiling architecture tb of testbench
-ModelSim-Altera Info: # -- Loading package VITAL_Timing
-ModelSim-Altera Info: # -- Loading package VITAL_Primitives
-ModelSim-Altera Info: # -- Loading package dffeas_pack
-ModelSim-Altera Info: # -- Loading package altera_primitives_components
-ModelSim-Altera Info: # -- Loading package cycloneiii_atom_pack
-ModelSim-Altera Info: # -- Loading package cycloneiii_components
-ModelSim-Altera Info: # -- Loading entity sad
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /DUV=topo_vhd.sdo -L altera -L cycloneiii -L gate_work -L work -voptargs="+acc"  testbench
-ModelSim-Altera Info: # vsim +transport_int_delays +transport_path_delays -L altera -L cycloneiii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /DUV=topo_vhd.sdo -t 1ps testbench 
+ModelSim-Altera Info: vsim -do topo_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp {/=C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406Lucas/sad-v1/simulation/modelsim/topo_vhd.sdo} work.sad
+ModelSim-Altera Info: # vsim -do topo_run_msim_gate_vhdl.do -l msim_transcript -gui -sdftyp {/=C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406Lucas/sad-v1/simulation/modelsim/topo_vhd.sdo} work.sad 
 ModelSim-Altera Info: # Loading std.standard
 ModelSim-Altera Info: # Loading std.textio(body)
 ModelSim-Altera Info: # Loading ieee.std_logic_1164(body)
-ModelSim-Altera Info: # Loading ieee.math_real(body)
-ModelSim-Altera Info: # Loading ieee.numeric_std(body)
-ModelSim-Altera Info: # Loading ieee.std_logic_textio(body)
 ModelSim-Altera Info: # Loading ieee.vital_timing(body)
 ModelSim-Altera Info: # Loading ieee.vital_primitives(body)
 ModelSim-Altera Info: # Loading altera.dffeas_pack
 ModelSim-Altera Info: # Loading altera.altera_primitives_components
 ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_atom_pack(body)
 ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_components
-ModelSim-Altera Info: # Loading work.testbench(tb)
+ModelSim-Altera Info: # Loading work.sad(structure)
 ModelSim-Altera Info: # SDF 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: # Loading work.sad(structure)
+ModelSim-Altera Info: # usage: sdfcom [ options ] source-file output-file
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Options:
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #   -mindelays          Use minimum timing from min:typ:max expressions
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #   -typdelays          Use typical timing from min:typ:max expressions (default)
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #   -maxdelays          Use maximum timing from min:typ:max expressions
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #   -delayscale <val>   Scale delays by the specified value
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #   -nocompress         Don't compress the resulting output file
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Loading ieee.std_logic_arith(body)
 ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_io_obuf(arch)
 ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_io_ibuf(arch)
@@ -89,63 +83,46 @@ ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_clkctrl(vital_clkctrl)
 ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_ena_reg(behave)
 ModelSim-Altera Info: # Loading cycloneiii.cycloneiii_lcell_comb(vital_lcell_comb)
 ModelSim-Altera Info: # Loading altera.dffeas(vital_dffeas)
-ModelSim-Altera Info: # Loading instances from topo_vhd.sdo
-ModelSim-Altera Info: # Loading timing data from topo_vhd.sdo
-ModelSim-Altera Warning: # ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+ModelSim-Altera Info: # Loading instances from C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406Lucas/sad-v1/simulation/modelsim/topo_vhd.sdo
+ModelSim-Altera Info: # Loading timing data from C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406Lucas/sad-v1/simulation/modelsim/topo_vhd.sdo
+ModelSim-Altera Warning: # ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
 ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
 ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
 ModelSim-Altera Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE54061/INE5406/sad-v1/testbench.vhd
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /sad File: topo.vho
+ModelSim-Altera Info: # do topo_run_msim_gate_vhdl.do 
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Modifying modelsim.ini
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: # add wave *
-ModelSim-Altera Info: # view structure
-ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
-ModelSim-Altera Info: # view signals
-ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
-ModelSim-Altera Info: # run 360 ns
-ModelSim-Altera Error: # ** Error: Fail 0
-ModelSim-Altera Info: #    Time: 20 ns  Iteration: 0  Instance: /testbench
-ModelSim-Altera Error: # ** Error: Fail 1
-ModelSim-Altera Info: #    Time: 40 ns  Iteration: 0  Instance: /testbench
-ModelSim-Altera Info: # ** Note: Test done.
-ModelSim-Altera Info: #    Time: 60 ns  Iteration: 0  Instance: /testbench
-Error: Errors encountered while running modelsim do file
-Error: NativeLink simulation flow was NOT successful
-
-
-
-================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
-Nativelink TCL script failed with errorCode:  1
-Nativelink TCL script failed with errorInfo:  1
-    (procedure "launch_sim" line 1)
-    invoked from within
-"launch_sim launch_args_hash"
-    ("eval" body line 1)
-    invoked from within
-"eval launch_sim launch_args_hash"
-    invoked from within
-"if [ info exists ::errorCode ] {
-				set savedCode $::errorCode
-				set savedInfo $::errorInfo
-				error $result $savedInfo $savedCode
-			} else {
-			..."
-    invoked from within
-"if [catch {eval launch_sim launch_args_hash} result ] {
-			set status 1
-			if [ info exists ::errorCode ] {
-				set savedCode $::errorCode
-				set sav..."
-    (procedure "run_sim" line 78)
-    invoked from within
-"run_sim run_sim_args_hash"
-    invoked from within
-"if [ info exists ::errorCode ] {
-			set savedCode $::errorCode
-			set savedInfo $::errorInfo
-			error "$result" $savedInfo $savedCode
-		} else {
-			er..."
-    (procedure "run_eda_simulation_tool" line 330)
-    invoked from within
-"run_eda_simulation_tool eda_opts_hash"
+ModelSim-Altera Info: # vcom -93 -work work {topo.vho}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Loading package STANDARD
+ModelSim-Altera Info: # -- Loading package TEXTIO
+ModelSim-Altera Info: # -- Loading package std_logic_1164
+ModelSim-Altera Info: # -- Loading package VITAL_Timing
+ModelSim-Altera Info: # -- Loading package VITAL_Primitives
+ModelSim-Altera Info: # -- Loading package dffeas_pack
+ModelSim-Altera Info: # -- Loading package altera_primitives_components
+ModelSim-Altera Info: # -- Loading package cycloneiii_atom_pack
+ModelSim-Altera Info: # -- Loading package cycloneiii_components
+ModelSim-Altera Info: # -- Compiling entity sad
+ModelSim-Altera Info: # -- Compiling architecture structure of sad
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: add wave  \
+ModelSim-Altera Info: sim:/sad/CLOCK \
+ModelSim-Altera Info: sim:/sad/iniciar \
+ModelSim-Altera Info: sim:/sad/reset \
+ModelSim-Altera Info: sim:/sad/sample_ori \
+ModelSim-Altera Info: sim:/sad/sample_can \
+ModelSim-Altera Info: sim:/sad/SAD_saida \
+ModelSim-Altera Info: sim:/sad/end_sad \
+ModelSim-Altera Info: sim:/sad/read_sad \
+ModelSim-Altera Info: sim:/sad/pronto
+ModelSim-Altera Info: do {C:/Users/lucas/Documents/Sistemas Digitais/GIT/INE5406Lucas/sad-v1/estimulos.do}
+ModelSim-Altera Info: run -all
+ModelSim-Altera Info: # WARNING: No extended dataflow license exists
+Info: NativeLink simulation flow was successful
