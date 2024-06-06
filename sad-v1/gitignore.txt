@@ -1,0 +1,13 @@
+# Ignore all files
+/*
+# Except specific file types in directories
+!*/     # Allow all directories
+!*.qpf  # Allow .qpf files in all directories
+!*.qsf  # Allow .qsf files in all directories
+!*.vhd  # Allow .vhd files in all directories
+!*.do   # Allow .do files in all directories
+!*.json # Allow .json files in all directories
+!*.md   # Allow .md files in all directories
+# Ignore everything else within directories
+*.*
+README
