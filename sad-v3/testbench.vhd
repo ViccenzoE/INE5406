@@ -7,30 +7,25 @@ use std.textio.all;
 entity testbench is
 end testbench;
 
-architecture tb of testbench is
-  constant passo : TIME := 20 ns;	 
+architecture tb of testbench is	 
 
   signal CLOCK      : std_logic := '0';
   signal iniciar    : std_logic := '0';
   signal reset      : std_logic := '0';
   signal sample_ori : std_logic_vector(31 downto 0);
   signal sample_can : std_logic_vector(31 downto 0);
-  signal SAD_saida  : std_logic_vector(7 downto 0);
+  signal finished: std_LOGIC:= '0';
+  
+  signal SAD_saida  : std_logic_vector(13 downto 0);
   signal end_sad    : std_logic_vector(3 downto 0);
   signal read_sad   : std_logic;
   signal pronto     : std_logic;
   signal valor_de_saida : std_logic_vector(7 downto 0);
 
+  
+CONSTANT passo : TIME := 10 ns;
+
 begin
-  clock_gen: process
-  begin
-    while true loop
-      CLOCK <= '0';
-      wait for passo / 2;
-      CLOCK <= '1';
-      wait for passo / 2;
-    end loop;
-  end process clock_gen;
 
   -- Connect DUV
   DUV: entity work.sad 
@@ -45,9 +40,11 @@ begin
       read_sad   => read_sad,
       pronto     => pronto
     );
+	CLOCK <= not CLOCK after passo/2 when finished /= '1' else '0';
+					
 
   stim: process is
-    file arquivo_de_estimulos : text open read_mode is "golden-model/estimulos.dat";
+    file arquivo_de_estimulos : text open read_mode is "C:\Users\lucas\Documents\Sistemas Digitais\GIT\INE5406Lucas\sad-v3\golden-model\estimulos.dat";
     variable linha_de_estimulos: line;
     variable espaco: character;
     variable valor_de_bo: bit_vector(31 downto 0);
@@ -87,7 +84,7 @@ begin
       wait for passo;
 
       iniciar <= '1';
-      wait for passo;
+      wait for passo*2;
       iniciar <= '0';
 
       wait until pronto = '1';
