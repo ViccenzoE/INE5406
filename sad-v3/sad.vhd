@@ -13,7 +13,7 @@ PORT(
 	sample_can:IN std_LOGIC_VECTOR(31 DOWNTO 0);
 	
 	-- Saí­das
-	SAD_saida: OUT std_logic_vector(7 DOWNTO 0);
+	SAD_saida: OUT std_logic_vector(13 DOWNTO 0);
 	end_sad: OUT std_logic_vector(3 DOWNTO 0);
 	read_sad: OUT std_logic;
 	pronto: OUT std_logic
@@ -30,7 +30,7 @@ PORT(
 	sample_ori, sample_can : IN STD_LOGIC_VECTOR(31 downto 0); -- Acesso à memória, ori = A, can = B
 	menor : OUT STD_LOGIC; -- Comparação para identificação da última linha
 	endi : OUT STD_LOGIC_VECTOR(3 downto 0); -- Endereço a ser acessado pela memória
-	SAD : OUT STD_LOGIC_VECTOR(7 downto 0) -- Valor do SAD atual
+	SAD : OUT STD_LOGIC_VECTOR(13 downto 0) -- Valor do SAD atual
 );
 END COMPONENT;
 
