@@ -1,64 +1,102 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use ieee.math_real.all;
 use ieee.numeric_std.all;
-use IEEE.std_logic_te
+use IEEE.std_logic_textio.all;
+use std.textio.all;
 
-ENTITY testbench IS
-END testbench;
+entity testbench is
+end testbench;
 
-ARCHITECTURE tb OF testbench IS
+architecture tb of testbench is	 
 
-	-- Sinais de teste
-	signal CLOCK: IN std_logic := '0';
-	signal iniciar: IN std_logic := '1';
-	signal reset: IN std_logic := '0';
-	signal sample_ori: std_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
-	signal sample_can: std_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
+  signal CLOCK      : std_logic := '0';
+  signal iniciar    : std_logic := '0';
+  signal reset      : std_logic := '0';
+  signal sample_ori : std_logic_vector(31 downto 0);
+  signal sample_can : std_logic_vector(31 downto 0);
+  signal finished: std_LOGIC:= '0';
+  
+  signal SAD_saida  : std_logic_vector(13 downto 0);
+  signal end_sad    : std_logic_vector(3 downto 0);
+  signal read_sad   : std_logic;
+  signal pronto     : std_logic;
+  signal valor_de_saida : std_logic_vector(7 downto 0);
 
-	-- Saí­das
-	SAD_saida: OUT std_logic_vector(7 DOWNTO 0);
-	end_sad: OUT std_logic_vector(3 DOWNTO 0);
-	read_sad: OUT std_logic;
-	pronto: OUT std_logic
-
-	-- Constante do clock
-	CONSTANT passo : TIME := 20 ns;
-		
+  
+CONSTANT passo : TIME := 10 ns;
 
 begin
 
-COMPONENT sad_bo IS
-PORT(
+  -- Connect DUV
+  DUV: entity work.sad 
+    port map(
+      CLOCK      => CLOCK,
+      iniciar    => iniciar,
+      reset      => reset,
+      sample_ori => sample_ori,
+      sample_can => sample_can,
+      SAD_saida  => SAD_saida,
+      end_sad    => end_sad,
+      read_sad   => read_sad,
+      pronto     => pronto
+    );
+	CLOCK <= not CLOCK after passo/2 when finished /= '1' else '0';
+					
 
-	CLK, zi, ci, cpA, cpB, zsoma, csoma, csad_reg: IN STD_LOGIC; -- Sinais de controle
-	sample_ori, sample_can : IN STD_LOGIC_VECTOR(31 downto 0); -- Acesso à memória, ori = A, can = B
-	menor : OUT STD_LOGIC; -- Comparação para identificação da última linha
-	endi : OUT STD_LOGIC_VECTOR(3 downto 0); -- Endereço a ser acessado pela memória
-	SAD : OUT STD_LOGIC_VECTOR(7 downto 0) -- Valor do SAD atual
-);
-END COMPONENT;
+  stim: process is
+    file arquivo_de_estimulos : text open read_mode is "C:\Users\lucas\Documents\Sistemas Digitais\GIT\INE5406Lucas\sad-v3\golden-model\estimulos.dat";
+    variable linha_de_estimulos: line;
+    variable espaco: character;
+    variable valor_de_bo: bit_vector(31 downto 0);
+    variable valor_de_bc: bit_vector(31 downto 0);
+    variable valor_de_saida_bit: bit_vector(7 downto 0);
 
-COMPONENT sad_bc IS
-	PORT (
-		clk : IN STD_LOGIC; -- ck
-		enable : IN STD_LOGIC; -- iniciar
-		reset : IN STD_LOGIC; -- reset
-		menor : IN STD_LOGIC; -- menor que a quantia de linhas
-		read_mem : OUT STD_LOGIC; -- read
-		done : OUT STD_LOGIC;
-		cpA, cpB, ci, zi, zsoma, csoma, csad_reg : OUT STD_LOGIC
-		);
-END COMPONENT;
-SIGNAL si1, si2, si3, si4, si5, si6, si7, men : std_logic;
+    function bit_vector_to_std_logic_vector(bv: bit_vector) return std_logic_vector is
+      variable result: std_logic_vector(bv'range);
+    begin
+      for i in bv'range loop
+        result(i) := '0';
+        if bv(i) = '1' then
+          result(i) := '1';
+        end if;
+      end loop;
+      return result;
+    end function;
 
+  begin
+    -- Reset the DUV
+    reset <= '1';
+    wait for 2 * passo;
+    reset <= '0';
 
-BEGIN 
-	--clock <= CLOCK_50;
-	--clock <= CLOCK_16000000;
-	V1: sad_bo PORT MAP(CLOCK, si1, si2, si3, si4, si5, si6, si7, sample_ori(31 downto 0), sample_can(31 downto 0), men, end_sad, SAD_saida);
-	V2: sad_bc PORT MAP(CLOCK, iniciar, reset, men, read_sad, pronto, si3, si4, si2, si1, si5, si6, si7);
-	
-	
-END ARCHITECTURE;
-	
+    while not endfile(arquivo_de_estimulos) loop
+      readline(arquivo_de_estimulos, linha_de_estimulos);
+      read(linha_de_estimulos, valor_de_bo);
+      read(linha_de_estimulos, espaco);
+      read(linha_de_estimulos, valor_de_bc);
+      read(linha_de_estimulos, espaco);
+      read(linha_de_estimulos, valor_de_saida_bit);
+
+      sample_ori  <= bit_vector_to_std_logic_vector(valor_de_bo);
+      sample_can  <= bit_vector_to_std_logic_vector(valor_de_bc);
+      valor_de_saida <= bit_vector_to_std_logic_vector(valor_de_saida_bit);
+
+      wait for passo;
+
+      iniciar <= '1';
+      wait for passo*2;
+      iniciar <= '0';
+
+      wait until pronto = '1';
+
+      assert (SAD_saida = valor_de_saida) 
+        report "Falha na simulacao." severity error;
+
+      wait for passo;
+    end loop;
+
+    wait for passo;
+    assert false report "Test done." severity note;
+    wait;
+  end process stim;
+end tb;

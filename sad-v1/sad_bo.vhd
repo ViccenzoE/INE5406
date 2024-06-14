@@ -105,7 +105,7 @@ soma_reg : registrador generic map(N => 14) PORT MAP(clk, csoma, sig7, sig8);
 SAD_reg : registrador generic map(N => 14) PORT MAP(clk, csad_reg, sig8, SAD);
 mux2 : mux2para1 generic map(N => 7) PORT MAP(zi, sig24, zero7, sig21);
 regi : registrador generic map(N => 7) PORT MAP(clk, ci, sig21, sig22);
-som2: somadornbits generic map(6) PORT MAP('0', sig22(5 downto 0), "000001", sig24); 
+som2: somadornbits generic map(N => 6) PORT MAP('0', sig22(5 downto 0), "000001", sig24); 
 
 
 END arc;

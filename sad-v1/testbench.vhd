@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 use IEEE.std_logic_textio.all;
 use std.textio.all;
 
+
 entity testbench is
 end testbench;
  
@@ -15,38 +16,46 @@ signal iniciar: std_logic := '1';
 signal reset: std_logic := '0';
 signal sample_ori: std_LOGIC_VECTOR(7 DOWNTO 0);
 signal sample_can: std_LOGIC_VECTOR(7 DOWNTO 0);
+signal finished: std_LOGIC:= '0';
 
 --saída
 signal SAD_saida: std_logic_vector(13 DOWNTO 0);
 signal end_sad: std_logic_vector(5 DOWNTO 0);
 signal read_sad: std_logic := '0';
 signal pronto: std_logic := '0';
-
-CONSTANT passo : TIME := 20 ns;
+-- periodo de clock 6,14 ns
+CONSTANT passo : TIME := 10 ns;
 
 begin 
 
 	DUV: entity work.sad
-		port map(CLOCK, iniciar, reset, sample_ori, sample_can);
-	CLOCK <= not CLOCK after passo/2;
+		port map(CLOCK, iniciar, reset, sample_ori, sample_can, SAD_saida, end_sad, read_sad, pronto);
+	CLOCK <= not CLOCK after passo/2 when finished /= '1' else '0';
 					
 	process
 	begin
 		sample_ori <= std_LOGIC_VECTOR(to_unsigned(0, sample_ori'length));
 		sample_can <= std_LOGIC_VECTOR(to_unsigned(0, sample_can'length));
-		wait for passo;
-		assert(sad_saida = "00000000000000")
+		wait for passo*2;
+		wait until pronto'event and pronto = '1';
+		wait for passo/2;
+		assert(SAD_saida = "00000000000000")
 		report "Fail 0" severity error;
 		
 		sample_ori <= std_LOGIC_VECTOR(to_unsigned(255, sample_ori'length));
 		sample_can <= std_LOGIC_VECTOR(to_unsigned(0, sample_can'length));
-		wait for passo;
-		assert(sad_saida = "11111111111111")
+		wait for passo*2;
+		wait until pronto'event and pronto = '1';
+		wait for passo/2;
+		assert(SAD_saida = "11111111000000")
 		report "Fail 1" severity error;
 		
 		
 		wait for passo;
 		assert false report "Test done." severity note;
+		finished <= '1';
 		wait;
 	end process;
 end tb;
+
+		
