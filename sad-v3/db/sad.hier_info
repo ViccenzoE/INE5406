@@ -90,94 +90,94 @@ pronto << sad_bc:V2.done
 
 
 |sad|sad_bo:V1
+CLK => registrador:pA0.clk
 CLK => registrador:pA1.clk
 CLK => registrador:pA2.clk
 CLK => registrador:pA3.clk
-CLK => registrador:pA4.clk
+CLK => registrador:pB0.clk
 CLK => registrador:pB1.clk
 CLK => registrador:pB2.clk
 CLK => registrador:pB3.clk
-CLK => registrador:pB4.clk
 CLK => registrador:soma.clk
 CLK => registrador:SAD_reg.clk
 CLK => registrador:regi.clk
 zi => mux2para1:mux2.sel
 ci => registrador:regi.carga
+cpA => registrador:pA0.carga
 cpA => registrador:pA1.carga
 cpA => registrador:pA2.carga
 cpA => registrador:pA3.carga
-cpA => registrador:pA4.carga
+cpB => registrador:pB0.carga
 cpB => registrador:pB1.carga
 cpB => registrador:pB2.carga
 cpB => registrador:pB3.carga
-cpB => registrador:pB4.carga
 zsoma => mux2para1:mux1.sel
 csoma => registrador:soma.carga
 csad_reg => registrador:SAD_reg.carga
-sample_ori[0] => registrador:pA4.D[0]
-sample_ori[1] => registrador:pA4.D[1]
-sample_ori[2] => registrador:pA4.D[2]
-sample_ori[3] => registrador:pA4.D[3]
-sample_ori[4] => registrador:pA4.D[4]
-sample_ori[5] => registrador:pA4.D[5]
-sample_ori[6] => registrador:pA4.D[6]
-sample_ori[7] => registrador:pA4.D[7]
-sample_ori[8] => registrador:pA3.D[0]
-sample_ori[9] => registrador:pA3.D[1]
-sample_ori[10] => registrador:pA3.D[2]
-sample_ori[11] => registrador:pA3.D[3]
-sample_ori[12] => registrador:pA3.D[4]
-sample_ori[13] => registrador:pA3.D[5]
-sample_ori[14] => registrador:pA3.D[6]
-sample_ori[15] => registrador:pA3.D[7]
-sample_ori[16] => registrador:pA2.D[0]
-sample_ori[17] => registrador:pA2.D[1]
-sample_ori[18] => registrador:pA2.D[2]
-sample_ori[19] => registrador:pA2.D[3]
-sample_ori[20] => registrador:pA2.D[4]
-sample_ori[21] => registrador:pA2.D[5]
-sample_ori[22] => registrador:pA2.D[6]
-sample_ori[23] => registrador:pA2.D[7]
-sample_ori[24] => registrador:pA1.D[0]
-sample_ori[25] => registrador:pA1.D[1]
-sample_ori[26] => registrador:pA1.D[2]
-sample_ori[27] => registrador:pA1.D[3]
-sample_ori[28] => registrador:pA1.D[4]
-sample_ori[29] => registrador:pA1.D[5]
-sample_ori[30] => registrador:pA1.D[6]
-sample_ori[31] => registrador:pA1.D[7]
-sample_can[0] => registrador:pB4.D[0]
-sample_can[1] => registrador:pB4.D[1]
-sample_can[2] => registrador:pB4.D[2]
-sample_can[3] => registrador:pB4.D[3]
-sample_can[4] => registrador:pB4.D[4]
-sample_can[5] => registrador:pB4.D[5]
-sample_can[6] => registrador:pB4.D[6]
-sample_can[7] => registrador:pB4.D[7]
-sample_can[8] => registrador:pB3.D[0]
-sample_can[9] => registrador:pB3.D[1]
-sample_can[10] => registrador:pB3.D[2]
-sample_can[11] => registrador:pB3.D[3]
-sample_can[12] => registrador:pB3.D[4]
-sample_can[13] => registrador:pB3.D[5]
-sample_can[14] => registrador:pB3.D[6]
-sample_can[15] => registrador:pB3.D[7]
-sample_can[16] => registrador:pB2.D[0]
-sample_can[17] => registrador:pB2.D[1]
-sample_can[18] => registrador:pB2.D[2]
-sample_can[19] => registrador:pB2.D[3]
-sample_can[20] => registrador:pB2.D[4]
-sample_can[21] => registrador:pB2.D[5]
-sample_can[22] => registrador:pB2.D[6]
-sample_can[23] => registrador:pB2.D[7]
-sample_can[24] => registrador:pB1.D[0]
-sample_can[25] => registrador:pB1.D[1]
-sample_can[26] => registrador:pB1.D[2]
-sample_can[27] => registrador:pB1.D[3]
-sample_can[28] => registrador:pB1.D[4]
-sample_can[29] => registrador:pB1.D[5]
-sample_can[30] => registrador:pB1.D[6]
-sample_can[31] => registrador:pB1.D[7]
+sample_ori[0] => registrador:pA3.D[0]
+sample_ori[1] => registrador:pA3.D[1]
+sample_ori[2] => registrador:pA3.D[2]
+sample_ori[3] => registrador:pA3.D[3]
+sample_ori[4] => registrador:pA3.D[4]
+sample_ori[5] => registrador:pA3.D[5]
+sample_ori[6] => registrador:pA3.D[6]
+sample_ori[7] => registrador:pA3.D[7]
+sample_ori[8] => registrador:pA2.D[0]
+sample_ori[9] => registrador:pA2.D[1]
+sample_ori[10] => registrador:pA2.D[2]
+sample_ori[11] => registrador:pA2.D[3]
+sample_ori[12] => registrador:pA2.D[4]
+sample_ori[13] => registrador:pA2.D[5]
+sample_ori[14] => registrador:pA2.D[6]
+sample_ori[15] => registrador:pA2.D[7]
+sample_ori[16] => registrador:pA1.D[0]
+sample_ori[17] => registrador:pA1.D[1]
+sample_ori[18] => registrador:pA1.D[2]
+sample_ori[19] => registrador:pA1.D[3]
+sample_ori[20] => registrador:pA1.D[4]
+sample_ori[21] => registrador:pA1.D[5]
+sample_ori[22] => registrador:pA1.D[6]
+sample_ori[23] => registrador:pA1.D[7]
+sample_ori[24] => registrador:pA0.D[0]
+sample_ori[25] => registrador:pA0.D[1]
+sample_ori[26] => registrador:pA0.D[2]
+sample_ori[27] => registrador:pA0.D[3]
+sample_ori[28] => registrador:pA0.D[4]
+sample_ori[29] => registrador:pA0.D[5]
+sample_ori[30] => registrador:pA0.D[6]
+sample_ori[31] => registrador:pA0.D[7]
+sample_can[0] => registrador:pB3.D[0]
+sample_can[1] => registrador:pB3.D[1]
+sample_can[2] => registrador:pB3.D[2]
+sample_can[3] => registrador:pB3.D[3]
+sample_can[4] => registrador:pB3.D[4]
+sample_can[5] => registrador:pB3.D[5]
+sample_can[6] => registrador:pB3.D[6]
+sample_can[7] => registrador:pB3.D[7]
+sample_can[8] => registrador:pB2.D[0]
+sample_can[9] => registrador:pB2.D[1]
+sample_can[10] => registrador:pB2.D[2]
+sample_can[11] => registrador:pB2.D[3]
+sample_can[12] => registrador:pB2.D[4]
+sample_can[13] => registrador:pB2.D[5]
+sample_can[14] => registrador:pB2.D[6]
+sample_can[15] => registrador:pB2.D[7]
+sample_can[16] => registrador:pB1.D[0]
+sample_can[17] => registrador:pB1.D[1]
+sample_can[18] => registrador:pB1.D[2]
+sample_can[19] => registrador:pB1.D[3]
+sample_can[20] => registrador:pB1.D[4]
+sample_can[21] => registrador:pB1.D[5]
+sample_can[22] => registrador:pB1.D[6]
+sample_can[23] => registrador:pB1.D[7]
+sample_can[24] => registrador:pB0.D[0]
+sample_can[25] => registrador:pB0.D[1]
+sample_can[26] => registrador:pB0.D[2]
+sample_can[27] => registrador:pB0.D[3]
+sample_can[28] => registrador:pB0.D[4]
+sample_can[29] => registrador:pB0.D[5]
+sample_can[30] => registrador:pB0.D[6]
+sample_can[31] => registrador:pB0.D[7]
 menor <= registrador:regi.Q[4]
 endi[0] <= registrador:regi.Q[0]
 endi[1] <= registrador:regi.Q[1]
@@ -197,6 +197,34 @@ SAD[10] <= registrador:SAD_reg.Q[10]
 SAD[11] <= registrador:SAD_reg.Q[11]
 SAD[12] <= registrador:SAD_reg.Q[12]
 SAD[13] <= registrador:SAD_reg.Q[13]
+
+
+|sad|sad_bo:V1|registrador:pA0
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+carga => ~NO_FANOUT~
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sad|sad_bo:V1|registrador:pA1
@@ -283,7 +311,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sad|sad_bo:V1|registrador:pA4
+|sad|sad_bo:V1|registrador:pB0
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
 clk => Q[2]~reg0.CLK
@@ -395,32 +423,31 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sad|sad_bo:V1|registrador:pB4
-clk => Q[0]~reg0.CLK
-clk => Q[1]~reg0.CLK
-clk => Q[2]~reg0.CLK
-clk => Q[3]~reg0.CLK
-clk => Q[4]~reg0.CLK
-clk => Q[5]~reg0.CLK
-clk => Q[6]~reg0.CLK
-clk => Q[7]~reg0.CLK
-carga => ~NO_FANOUT~
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-D[4] => Q[4]~reg0.DATAIN
-D[5] => Q[5]~reg0.DATAIN
-D[6] => Q[6]~reg0.DATAIN
-D[7] => Q[7]~reg0.DATAIN
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|sad|sad_bo:V1|subtratornbits:sub0
+sub1[0] => Add0.IN16
+sub1[1] => Add0.IN15
+sub1[2] => Add0.IN14
+sub1[3] => Add0.IN13
+sub1[4] => Add0.IN12
+sub1[5] => Add0.IN11
+sub1[6] => Add0.IN10
+sub1[7] => Add0.IN9
+sub2[0] => Add0.IN8
+sub2[1] => Add0.IN7
+sub2[2] => Add0.IN6
+sub2[3] => Add0.IN5
+sub2[4] => Add0.IN4
+sub2[5] => Add0.IN3
+sub2[6] => Add0.IN2
+sub2[7] => Add0.IN1
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sad|sad_bo:V1|subtratornbits:sub1
@@ -504,31 +531,30 @@ saida[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sad|sad_bo:V1|subtratornbits:sub4
-sub1[0] => Add0.IN16
-sub1[1] => Add0.IN15
-sub1[2] => Add0.IN14
-sub1[3] => Add0.IN13
-sub1[4] => Add0.IN12
-sub1[5] => Add0.IN11
-sub1[6] => Add0.IN10
-sub1[7] => Add0.IN9
-sub2[0] => Add0.IN8
-sub2[1] => Add0.IN7
-sub2[2] => Add0.IN6
-sub2[3] => Add0.IN5
-sub2[4] => Add0.IN4
-sub2[5] => Add0.IN3
-sub2[6] => Add0.IN2
-sub2[7] => Add0.IN1
-saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+|sad|sad_bo:V1|abst:absto0
+a[0] => s.IN0
+a[1] => s.IN0
+a[2] => s.IN0
+a[3] => s.IN0
+a[4] => s.IN0
+a[5] => s.IN0
+a[6] => s.IN0
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => s.IN1
+a[7] => Add0.IN15
+s[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sad|sad_bo:V1|abst:absto1
@@ -609,32 +635,6 @@ s[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 s[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sad|sad_bo:V1|abst:absto4
-a[0] => s.IN0
-a[1] => s.IN0
-a[2] => s.IN0
-a[3] => s.IN0
-a[4] => s.IN0
-a[5] => s.IN0
-a[6] => s.IN0
-a[7] => s.IN1
-a[7] => s.IN1
-a[7] => s.IN1
-a[7] => s.IN1
-a[7] => s.IN1
-a[7] => s.IN1
-a[7] => s.IN1
-a[7] => Add0.IN15
-s[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-s[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |sad|sad_bo:V1|somadornbits:som1
 cin => ~NO_FANOUT~
 add1[0] => Add0.IN8
@@ -664,7 +664,7 @@ sum[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 sum[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sad|sad_bo:V1|somadornbits:som12
+|sad|sad_bo:V1|somadornbits:som2
 cin => ~NO_FANOUT~
 add1[0] => Add0.IN8
 add1[1] => Add0.IN7
@@ -965,7 +965,7 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sad|sad_bo:V1|somadornbits:som2
+|sad|sad_bo:V1|somadornbits:somi
 cin => ~NO_FANOUT~
 add1[0] => Add0.IN4
 add1[1] => Add0.IN3

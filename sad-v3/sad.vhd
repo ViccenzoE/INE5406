@@ -45,14 +45,40 @@ COMPONENT sad_bc IS
 		cpA, cpB, ci, zi, zsoma, csoma, csad_reg : OUT STD_LOGIC
 		);
 END COMPONENT;
-SIGNAL si1, si2, si3, si4, si5, si6, si7, men : std_logic;
+SIGNAL zi, ci, cpA, cpB, zsoma, csoma, csad_reg, menor : std_logic;
 
 
 BEGIN 
 	--clock <= CLOCK_50;
 	--clock <= CLOCK_16000000;
-	V1: sad_bo PORT MAP(CLOCK, si1, si2, si3, si4, si5, si6, si7, sample_ori(31 downto 0), sample_can(31 downto 0), men, end_sad, SAD_saida);
-	V2: sad_bc PORT MAP(CLOCK, iniciar, reset, men, read_sad, pronto, si3, si4, si2, si1, si5, si6, si7);
+	V1: sad_bo PORT MAP(
+						CLK => CLOCK,
+						zi	=> zi,
+						ci	=> ci,
+						cpA	=> cpA,
+						cpB	=> cpB,
+						zsoma	=> zsoma,
+						csoma	=> csoma,
+						csad_reg	=> csad_reg,
+						sample_ori	=> sample_ori(31 downto 0),
+						sample_can	=> sample_can(31 downto 0),
+						menor	=> menor,
+						endi	=> end_sad,
+						SAD	=> SAD_saida);
+	V2: sad_bc PORT MAP(
+						clk	=> CLOCK,
+						enable    => iniciar,
+						reset	=> reset,
+						menor	=> menor,
+						read_mem	=> read_sad,
+						done	=> pronto,
+						cpA	=> cpA,
+						cpB	=> cpB,
+						ci	=> ci,
+						zi	=> zi,
+						zsoma	=> zsoma,
+						csoma	=> csoma,
+						csad_reg	=> csad_reg);
 	
 	
 END ARCHITECTURE;

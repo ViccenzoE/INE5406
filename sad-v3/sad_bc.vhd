@@ -60,7 +60,7 @@ BEGIN
 		end if;
 	end process;
 
-	COMB: process(EA, enable, menor)
+	COMB: process(EA, enable)
 	begin
 		case EA is
 			  

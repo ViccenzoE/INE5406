@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sad
-Sat Jun 08 01:15:20 2024
+Sat Jun 15 22:15:11 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -16,24 +16,24 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   8. State Machine - |sad|sad_bc:V2|EA
   9. General Register Statistics
  10. Parameter Settings for User Entity Instance: sad_bo:V1
- 11. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA1
- 12. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA2
- 13. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA3
- 14. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA4
- 15. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB1
- 16. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB2
- 17. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB3
- 18. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB4
- 19. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub1
- 20. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub2
- 21. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub3
- 22. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub4
- 23. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto1
- 24. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto2
- 25. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto3
- 26. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto4
+ 11. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA0
+ 12. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA1
+ 13. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA2
+ 14. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA3
+ 15. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB0
+ 16. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB1
+ 17. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB2
+ 18. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB3
+ 19. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub0
+ 20. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub1
+ 21. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub2
+ 22. Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub3
+ 23. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto0
+ 24. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto1
+ 25. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto2
+ 26. Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto3
  27. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som1
- 28. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som12
+ 28. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som2
  29. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som3
  30. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som4
  31. Parameter Settings for User Entity Instance: sad_bo:V1|mux2para1:mux1
@@ -41,14 +41,14 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  33. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:SAD_reg
  34. Parameter Settings for User Entity Instance: sad_bo:V1|mux2para1:mux2
  35. Parameter Settings for User Entity Instance: sad_bo:V1|registrador:regi
- 36. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som2
+ 36. Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:somi
  37. Parameter Settings for User Entity Instance: sad_bc:V2
- 38. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2"
+ 38. Port Connectivity Checks: "sad_bo:V1|somadornbits:somi"
  39. Port Connectivity Checks: "sad_bo:V1|mux2para1:mux2"
  40. Port Connectivity Checks: "sad_bo:V1|mux2para1:mux1"
  41. Port Connectivity Checks: "sad_bo:V1|somadornbits:som4"
  42. Port Connectivity Checks: "sad_bo:V1|somadornbits:som3"
- 43. Port Connectivity Checks: "sad_bo:V1|somadornbits:som12"
+ 43. Port Connectivity Checks: "sad_bo:V1|somadornbits:som2"
  44. Port Connectivity Checks: "sad_bo:V1|somadornbits:som1"
  45. Elapsed Time Per Partition
  46. Analysis & Synthesis Messages
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 08 01:15:20 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 15 22:15:11 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; sad                                        ;
 ; Top-level Entity Name              ; sad                                        ;
@@ -246,30 +246,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; |sad                        ; 121 (0)           ; 103 (0)      ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |sad                               ; work         ;
 ;    |sad_bc:V2|              ; 5 (5)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bc:V2                     ; work         ;
 ;    |sad_bo:V1|              ; 116 (0)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1                     ; work         ;
+;       |abst:absto0|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|abst:absto0         ; work         ;
 ;       |abst:absto1|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|abst:absto1         ; work         ;
 ;       |abst:absto2|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|abst:absto2         ; work         ;
 ;       |abst:absto3|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|abst:absto3         ; work         ;
-;       |abst:absto4|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|abst:absto4         ; work         ;
 ;       |mux2para1:mux2|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|mux2para1:mux2      ; work         ;
 ;       |registrador:SAD_reg| ; 0 (0)             ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:SAD_reg ; work         ;
+;       |registrador:pA0|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pA0     ; work         ;
 ;       |registrador:pA1|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pA1     ; work         ;
 ;       |registrador:pA2|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pA2     ; work         ;
 ;       |registrador:pA3|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pA3     ; work         ;
-;       |registrador:pA4|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pA4     ; work         ;
+;       |registrador:pB0|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pB0     ; work         ;
 ;       |registrador:pB1|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pB1     ; work         ;
 ;       |registrador:pB2|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pB2     ; work         ;
 ;       |registrador:pB3|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pB3     ; work         ;
-;       |registrador:pB4|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:pB4     ; work         ;
 ;       |registrador:regi|    ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:regi    ; work         ;
 ;       |registrador:soma|    ; 14 (14)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|registrador:soma    ; work         ;
-;       |somadornbits:som12|  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|somadornbits:som12  ; work         ;
 ;       |somadornbits:som1|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|somadornbits:som1   ; work         ;
-;       |somadornbits:som2|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|somadornbits:som2   ; work         ;
+;       |somadornbits:som2|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|somadornbits:som2   ; work         ;
 ;       |somadornbits:som3|   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|somadornbits:som3   ; work         ;
+;       |somadornbits:somi|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|somadornbits:somi   ; work         ;
+;       |subtratornbits:sub0| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|subtratornbits:sub0 ; work         ;
 ;       |subtratornbits:sub1| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|subtratornbits:sub1 ; work         ;
 ;       |subtratornbits:sub2| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|subtratornbits:sub2 ; work         ;
 ;       |subtratornbits:sub3| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|subtratornbits:sub3 ; work         ;
-;       |subtratornbits:sub4| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sad|sad_bo:V1|subtratornbits:sub4 ; work         ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -316,6 +316,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA0 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA1 ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
@@ -346,7 +356,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pA4 ;
+; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB0 ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
@@ -385,13 +395,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sad_bo:V1|registrador:pB4 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; n              ; 8     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub0 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -425,13 +435,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sad_bo:V1|subtratornbits:sub4 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; n              ; 8     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto0 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 8     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -465,16 +475,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sad_bo:V1|abst:absto4 ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; n              ; 8     ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som1 ;
 +----------------+-------+-------------------------------------------------+
@@ -485,13 +485,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som12 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; n              ; 8     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -566,7 +566,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:som2 ;
+; Parameter Settings for User Entity Instance: sad_bo:V1|somadornbits:somi ;
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
@@ -588,7 +588,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------+
-; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2" ;
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:somi" ;
 +------------+-------+----------+-------------------------+
 ; Port       ; Type  ; Severity ; Details                 ;
 +------------+-------+----------+-------------------------+
@@ -636,13 +636,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "sad_bo:V1|somadornbits:som12" ;
-+------+-------+----------+--------------------------------+
-; Port ; Type  ; Severity ; Details                        ;
-+------+-------+----------+--------------------------------+
-; cin  ; Input ; Info     ; Stuck at GND                   ;
-+------+-------+----------+--------------------------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "sad_bo:V1|somadornbits:som2" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
 
 
 +---------------------------------------------------------+
@@ -669,7 +669,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jun 08 01:15:18 2024
+    Info: Processing started: Sat Jun 15 22:15:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sad -c sad
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
@@ -704,9 +704,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file abst.vh
     Info (12023): Found entity 1: abst
 Info (12127): Elaborating entity "sad" for the top level hierarchy
 Info (12128): Elaborating entity "sad_bo" for hierarchy "sad_bo:V1"
-Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:pA1"
-Info (12128): Elaborating entity "subtratornbits" for hierarchy "sad_bo:V1|subtratornbits:sub1"
-Info (12128): Elaborating entity "abst" for hierarchy "sad_bo:V1|abst:absto1"
+Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:pA0"
+Info (12128): Elaborating entity "subtratornbits" for hierarchy "sad_bo:V1|subtratornbits:sub0"
+Info (12128): Elaborating entity "abst" for hierarchy "sad_bo:V1|abst:absto0"
 Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:som1"
 Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:som3"
 Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:som4"
@@ -714,8 +714,9 @@ Info (12128): Elaborating entity "mux2para1" for hierarchy "sad_bo:V1|mux2para1:
 Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:soma"
 Info (12128): Elaborating entity "mux2para1" for hierarchy "sad_bo:V1|mux2para1:mux2"
 Info (12128): Elaborating entity "registrador" for hierarchy "sad_bo:V1|registrador:regi"
-Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:som2"
+Info (12128): Elaborating entity "somadornbits" for hierarchy "sad_bo:V1|somadornbits:somi"
 Info (12128): Elaborating entity "sad_bc" for hierarchy "sad_bc:V2"
+Warning (10492): VHDL Process Statement warning at sad_bc.vhd(83): signal "menor" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -723,10 +724,10 @@ Info (21057): Implemented 287 device resources after synthesis - the final resou
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 20 output pins
     Info (21061): Implemented 200 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Sat Jun 08 01:15:20 2024
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4662 megabytes
+    Info: Processing ended: Sat Jun 15 22:15:11 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
