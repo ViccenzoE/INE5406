@@ -1,0 +1,80 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do sad_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {sad.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiii_atom_pack
+# -- Loading package cycloneiii_components
+# -- Compiling entity sad
+# -- Compiling architecture structure of sad
+# 
+# vcom -93 -work work {C:/INE5406/sad-v3/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# -- Compiling architecture tb of testbench
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiii_atom_pack
+# -- Loading package cycloneiii_components
+# -- Loading entity sad
+# ** Warning: C:/INE5406/sad-v3/testbench.vhd(92): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 14 is not equal to right length 8).
+# 
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /DUT=sad_vhd.sdo -L altera -L cycloneiii -L gate_work -L work -voptargs="+acc"  testbench
+# vsim +transport_int_delays +transport_path_delays -L altera -L cycloneiii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /DUT=sad_vhd.sdo -t 1ps testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiii.cycloneiii_atom_pack(body)
+# Loading cycloneiii.cycloneiii_components
+# Loading work.testbench(tb)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading work.sad(structure)
+# Loading cycloneiii.cycloneiii_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneiii.cycloneiii_io_ibuf(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiii.cycloneiii_io_obuf(arch)
+# Loading cycloneiii.cycloneiii_clkctrl(vital_clkctrl)
+# Loading cycloneiii.cycloneiii_ena_reg(behave)
+# Loading instances from sad_vhd.sdo
+# ** Error: (vsim-SDF-3250) sad_vhd.sdo(0): Failed to find INSTANCE '/DUT'.
+# 
+# ** Error: (vsim-SDF-3894) : Errors occured in reading and resolving instances from compiled SDF file(s).
+# 
+# ** Error: (vsim-SDF-3250) sad_vhd.sdo(0): Failed to find INSTANCE '/DUT'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./sad_run_msim_gate_vhdl.do PAUSED at line 12
