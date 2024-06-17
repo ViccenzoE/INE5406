@@ -13,7 +13,9 @@ ARCHITECTURE comportamento OF registrador IS
 		PROCESS (clk)
 			BEGIN
 				IF (rising_edge(clk)) THEN
-					Q <= D;
+					if (carga = '1') then
+						Q <= D;
+					end if;
 				END IF;
 		END PROCESS;
 END comportamento;

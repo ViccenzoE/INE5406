@@ -33,6 +33,7 @@ for _ in range(32):
     diff4 = abs(int(entrada14, 2) - int(entrada24, 2))
 
     accumulator = diff1 + diff2 + diff3 + diff4
+    accumulator *= 16
 
     accumulator_binary = bin(accumulator)[2:].zfill(14)
 
