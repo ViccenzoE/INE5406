@@ -41,6 +41,9 @@ Define um subtrator de N bits, que realiza a operação de subtração entre doi
 ### SAD
 Integra os componentes sad_bo (bloco operacional) e sad_bc (bloco de controle) para calcular a Soma das Diferenças Absolutas (SAD). O componente sad_bc gerencia a lógica de controle e estados, enquanto sad_bo realiza a operação de subtração e soma absoluta. A arquitetura arc conecta esses componentes utilizando sinais intermediários para coordenar as operações e transmitir os resultados e estados apropriados.
 
+### Testbench
+Foi feito um testbench para cada arquivo de SAD (v1 e v3), onde o primeiro conta com uma descrição de código especificada para testar os casos de teste mais cruciais, enquanto o segundo possui um testbench que utiliza do arquivo gerado no golden model para percorrer casos de testes e verificar se batem com o resultado também presente no arquivo.
+
 ## Simulação
 Durante a simualção, houveram alguns problemas relacionado à entrada de dados da memmória para o sad_bo e sad_bc, o que gerou um comportamento "parado" no programa, o qual precisaria ser investigado mais a fundo para entendermos o problema.
 
